@@ -1,0 +1,101 @@
+.about-section {
+  background-color: $color-primary-100;
+  overflow: hidden;
+  font-family: "Nunito Sans", sans-serif;
+  position: relative;
+
+  &__container {
+    max-width: $main-max-width;
+    padding: 2rem 1rem;
+    margin: 0 auto;
+    position: relative;
+
+    @media only screen and (min-width: 790px) {
+      padding: 5rem 1rem;
+    }
+
+    &--subheader {
+      color: $color-primary-600;
+      font-size: 0.75rem;
+
+      @media only screen and (min-width: 500px) {
+        font-size: 1rem;
+      }
+    }
+
+    &--title {
+      color: $color-primary-900;
+      font-size: 2rem;
+      font-weight: 700;
+
+      @media only screen and (min-width: 500px) {
+        font-size: 2.5rem;
+      }
+
+      @media only screen and (min-width: 750px) {
+        font-size: 3.25rem;
+      }
+
+      @media only screen and (min-width: 992px) {
+        font-size: 4rem;
+      }
+    }
+
+    &--content {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 1rem;
+
+      margin-top: 2rem;
+
+      @media only screen and (min-width: 750px) {
+        flex-flow: row nowrap;
+      }
+
+      & img {
+        border-radius: 1rem;
+        object-fit: cover;
+
+        @media only screen and (min-width: 750px) {
+          width: 50%;
+        }
+      }
+
+      & aside {
+        display: flex;
+        flex-flow: column nowrap;
+
+        & p {
+          line-height: 1.5rem;
+        }
+
+        & ul {
+          list-style: none;
+          margin-top: 1rem;
+          margin-bottom: auto;
+
+          & li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+          }
+
+          & li::before {
+            content: "";
+            background-image: url(../media/square-check-solid.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 1em;
+            height: 1em;
+            position: relative;
+          }
+        }
+
+        & a {
+          align-self: flex-start;
+        }
+      }
+    }
+  }
+}

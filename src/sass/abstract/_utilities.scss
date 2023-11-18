@@ -1,0 +1,114 @@
+//breakpoints
+// LG: 1200px
+// MD: 992px
+// SM: 790px
+// XSM: 500px
+
+.logo-accent-piece {
+  fill: $color-accent-900;
+}
+
+.logo-letters {
+  fill: $color-primary-600;
+}
+
+.xsm-hide {
+  @media only screen and (max-width: 500px) {
+    display: none !important;
+  }
+}
+
+.sm-hide {
+  @media only screen and (max-width: 790px) {
+    display: none !important;
+  }
+}
+
+.opacity-none {
+  opacity: 0;
+}
+
+.btn-light {
+  background-color: $color-primary-600;
+  color: white !important;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  text-decoration: none;
+  font-weight: 500;
+
+  border-radius: 0.5rem;
+  padding: 0.725rem;
+
+  & svg {
+    fill: white;
+    opacity: 1;
+  }
+
+  &:hover {
+    background-color: #2c65d4 !important;
+  }
+}
+
+.flip-arrow-up {
+  transform: rotate(90deg);
+}
+
+.nav-active {
+  background-color: #bfc5cc !important;
+  border-radius: 0.5rem;
+}
+
+.no-decoration {
+  text-decoration: none;
+}
+
+.align-self-end {
+  align-self: flex-end;
+}
+
+.gradient-title {
+  background-image: linear-gradient(
+    110deg,
+    $color-primary-100,
+    $color-accent-900
+  );
+
+  background-size: 100%;
+  background-repeat: repeat;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title-bg-scroll {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  text-wrap: nowrap;
+  font-family: "Roboto", sans-serif;
+  font-size: 8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  opacity: 0.8;
+
+  color: $color-primary-300;
+
+  @media only screen and (min-width: 500px) {
+    font-size: 12rem;
+  }
+
+  @media only screen and (min-width: 750px) {
+    font-size: 16rem;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    font-size: 20rem;
+  }
+}

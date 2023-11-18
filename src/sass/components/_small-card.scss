@@ -1,0 +1,75 @@
+.small-card {
+  display: flex;
+  align-items: center;
+
+  // margin-bottom: 4rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  overflow: hidden;
+
+  max-width: 360px;
+  background-color: rgba($color-black-900, 0.6);
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+
+  @media only screen and (min-width: 500px) {
+    transition: all 0.2s;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    &:hover .small-card--content footer p svg {
+      transform: translateX(4px);
+    }
+  }
+
+  &--content {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.5rem;
+
+    background-color: transparent;
+    width: 60%;
+    padding: 1rem;
+
+    & h3 {
+      color: $color-primary-100;
+    }
+
+    & p {
+      color: $color-primary-300;
+      font-weight: 300;
+    }
+
+    & footer p {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      color: $color-accent-600;
+      font-weight: 700;
+
+      & svg {
+        height: 1rem;
+        fill: $color-accent-600;
+        transition: transform 0.2s;
+      }
+    }
+  }
+
+  &--img-container {
+    background-color: #3275f6;
+    width: 40%;
+    align-self: stretch;
+  }
+
+  &--img {
+    width: 100%;
+    height: 100%;
+    filter: opacity(0.8);
+    object-position: 10% 100%;
+    object-fit: cover;
+  }
+}
