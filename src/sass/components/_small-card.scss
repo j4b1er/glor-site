@@ -73,3 +73,47 @@
     object-fit: cover;
   }
 }
+
+.grid {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, 250px);
+  grid-auto-rows: 150px;
+  position: relative;
+}
+
+.card {
+  position: relative;
+  background: black;
+  padding: 1rem;
+  cursor: pointer;
+  // z-index: 1;
+}
+
+.card > svg {
+  height: 30%;
+  width: 55px;
+}
+
+.card:hover {
+  background-attachment: fixed;
+  background-image: radial-gradient(
+    circle at var(--x, 0) var(--y, 0),
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.0125) 10rem
+  );
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background-attachment: fixed;
+  background-image: radial-gradient(
+    circle at var(--x, 0) var(--y, 0),
+    rgba(255, 255, 255, 0.75),
+    transparent 5rem
+  );
+  pointer-events: none;
+  z-index: -1;
+}
