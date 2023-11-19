@@ -10,9 +10,11 @@
   &__card {
     position: relative;
 
-    background: $color-primary-400;
+    background: $color-primary-300;
     padding: 1rem;
+    // border: 1px solid $color-primary-400;
     border-radius: calc(1rem - 1px);
+    // box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
 
     cursor: pointer;
 
