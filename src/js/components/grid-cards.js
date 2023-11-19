@@ -1,4 +1,4 @@
-const grid = document.querySelector(".grid");
+export const grid = document.querySelector(".grid-cards");
 
 export function Card(e) {
   grid.style.setProperty("--x", e.x + "px");

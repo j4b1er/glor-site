@@ -1,0 +1,9 @@
+.services-section {
+  max-width: $main-max-width;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+
+  @media only screen and (min-width: 790px) {
+    padding: 5rem 1rem;
+  }
+}
