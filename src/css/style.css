@@ -410,7 +410,8 @@ body {
     width: 60%;
     padding: 1rem; }
     .small-card--content h3 {
-      color: #eef1f6; }
+      color: #eef1f6;
+      font-size: 1.125rem; }
     .small-card--content p {
       color: #dfe4ea;
       font-weight: 300; }
@@ -443,14 +444,19 @@ body {
   padding-top: 2rem;
   position: relative; }
   .grid-cards__card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
     background: #dfe4ea;
-    padding: 1rem;
     border-radius: calc(1rem - 1px);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer; }
     .grid-cards__card:hover {
       background-attachment: fixed;
       background-image: radial-gradient(circle at var(--x, 0) var(--y, 0), rgba(29, 53, 87, 0.2), rgba(29, 53, 87, 0.05) 10rem); }
+    .grid-cards__card:hover .grid-cards__card--img {
+      opacity: 1; }
     .grid-cards__card::after {
       content: "";
       position: absolute;
@@ -460,6 +466,31 @@ body {
       background-image: radial-gradient(circle at var(--x, 0) var(--y, 0), rgba(44, 101, 212, 0.75), transparent 5rem);
       pointer-events: none;
       z-index: -1; }
+    .grid-cards__card--content {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 0.5rem;
+      width: 60%;
+      padding: 1rem; }
+      .grid-cards__card--content h3 {
+        color: #1d3557;
+        font-size: 1.125rem; }
+      .grid-cards__card--content p {
+        color: #1d3557;
+        font-weight: 300;
+        font-size: 1rem; }
+    .grid-cards__card--img-container {
+      align-self: stretch;
+      border-radius: 0 calc(1rem - 1px) calc(1rem - 1px) 0;
+      overflow: hidden;
+      width: 40%; }
+    .grid-cards__card--img {
+      width: 100%;
+      height: 100%;
+      opacity: 0.8;
+      object-position: 10% 100%;
+      object-fit: cover;
+      transition: opacity 0.3s ease-in-out; }
 
 .main-hero {
   background-color: #1d3557;
