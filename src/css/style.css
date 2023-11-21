@@ -61,7 +61,10 @@
   border-radius: 0.5rem 0 0.5rem 0.5rem;
   padding: 0.725rem;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  transition: background-color 0.2s ease-in-out; }
+  .btn-light:hover {
+    background-color: #ffb600; }
   .btn-light > span {
     z-index: 1; }
     .btn-light > span svg {
