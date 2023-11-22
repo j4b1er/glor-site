@@ -10,7 +10,7 @@
 
   //Top navigation with news and extra links
   &__top-nav-container-background {
-    background-color: $color-black-900;
+    background-color: $color-green-accent-100;
   }
 
   &__top-nav-container {
@@ -30,14 +30,14 @@
 
       font-weight: 400;
       font-size: 0.875rem;
-      color: $color-primary-300;
+      color: $color-black-900;
       text-decoration: none;
       opacity: 0.8;
       transition: opacity 0.2s ease-in-out;
 
       & svg {
         height: 0.875rem;
-        fill: $color-primary-300;
+        fill: $color-black-900;
       }
 
       &:hover {
@@ -67,8 +67,8 @@
 
   //Main navigation with logo and a links
   &__main-nav-container-background {
-    background-color: $color-primary-300;
-    border-bottom: 1px solid #cdd1d6;
+    background-color: $color-black-900;
+    border-bottom: 1px solid $color-black-600;
 
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
   }
@@ -105,7 +105,7 @@
   &__main-nav-menu-links {
     font-weight: 500;
     font-size: 1rem;
-    color: #24335a;
+    color: $color-primary-100;
 
     list-style: none;
 
@@ -133,8 +133,8 @@
 
         & svg {
           transform: rotate(90deg) rotateY(0deg);
-          fill: #24335a;
-          opacity: 0.6;
+          fill: $color-primary-100;
+          // opacity: 0.6;
           transition: transform 0.2s;
         }
 
@@ -144,7 +144,7 @@
       }
 
       &:hover {
-        background-color: #bfc5cc;
+        background-color: $color-black-600;
       }
 
       & a {
@@ -178,8 +178,9 @@
 
   &__dropdown {
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(20px);
+    background-color: $color-black-600;
+    // background-color: rgba(0, 0, 0, 0.4);
+    // backdrop-filter: blur(20px);
     // padding: 2.5rem 0;
 
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
@@ -240,7 +241,7 @@
   }
 
   &__dropdown-card {
-    background-color: $color-primary-100;
+    background-color: $color-black-100;
     border-radius: 0.5rem;
     padding: 0.75rem;
 

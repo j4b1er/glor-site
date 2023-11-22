@@ -5,11 +5,14 @@
 // XSM: 500px
 
 .logo-accent-piece {
-  fill: $color-accent-900;
+  // fill: white;
+
+  fill: $color-green-accent-100;
 }
 
 .logo-letters {
-  fill: $color-primary-600;
+  // fill: $color-green-accent-100;
+  fill: $color-primary-100;
 }
 
 .xsm-hide {
@@ -29,8 +32,8 @@
 }
 
 .btn-light {
-  background-color: $color-primary-600;
-  color: white !important;
+  background-color: $color-black-600;
+  color: $color-primary-100 !important;
 
   display: inline-flex;
   align-items: center;
@@ -46,18 +49,25 @@
 
   overflow: hidden;
 
-  transition: background-color 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 
   &:hover {
-    background-color: $color-accent-900;
+    background-color: $color-green-accent-100;
+    color: $color-black-900 !important;
+  }
+
+  &:hover svg {
+    fill: $color-black-900 !important;
+    transform: translateX(2px);
   }
 
   & > span {
     z-index: 1;
 
     & svg {
-      fill: white;
+      fill: $color-primary-100;
       opacity: 1;
+      transition: all 0.2s ease-in-out;
     }
   }
 
@@ -70,7 +80,7 @@
     width: 170px;
     height: 170px;
 
-    background-color: $color-accent-900;
+    background-color: $color-green-accent-100;
 
     transform: rotate(45deg) translateY(-100%);
     transition: transform 0.2s ease-in-out;
@@ -86,7 +96,7 @@
 }
 
 .nav-active {
-  background-color: #bfc5cc !important;
+  background-color: $color-black-600 !important;
   border-radius: 0.5rem;
 }
 
@@ -125,11 +135,16 @@
   font-weight: 500;
   text-transform: uppercase;
 
-  z-index: -1;
+  z-index: 0;
 
   opacity: 0.6;
 
   color: $color-primary-300;
+
+  &--dark-mode {
+    opacity: 0.01;
+    z-index: -1;
+  }
 
   @media only screen and (min-width: 500px) {
     font-size: 12rem;
