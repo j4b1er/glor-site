@@ -38,9 +38,9 @@
     top: -436px; } }
 
 @keyframes text-switch {
-  5% {
+  3% {
     opacity: 1; }
-  20% {
+  22% {
     opacity: 1; }
   25% {
     opacity: 0; }
@@ -580,7 +580,6 @@ body {
         font-weight: 900; }
       .main-hero__content-hero h1 ul {
         list-style: none;
-        overflow: hidden;
         height: 109px; }
       .main-hero__content-hero h1 .switch-text {
         display: inline-block;
