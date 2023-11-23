@@ -1,5 +1,6 @@
 .services-section {
   position: relative;
+  overflow: hidden;
   font-family: "Nunito Sans", sans-serif;
 
   &__container {
@@ -13,7 +14,7 @@
     }
 
     &--subheader {
-      color: $color-primary-600;
+      color: $color-primary-300;
       font-size: 0.75rem;
 
       @media only screen and (min-width: 500px) {
@@ -22,7 +23,7 @@
     }
 
     &--title {
-      color: $color-primary-900;
+      color: $color-primary-100;
       font-size: 2rem;
       font-weight: 700;
 
