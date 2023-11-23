@@ -33,6 +33,20 @@
   100% {
     transform: translateX(0); } }
 
+@keyframes slide {
+  100% {
+    top: -436px; } }
+
+@keyframes text-switch {
+  5% {
+    opacity: 1; }
+  20% {
+    opacity: 1; }
+  25% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+
 .logo-accent-piece {
   fill: #a4ee15; }
 
@@ -361,7 +375,7 @@ body {
       display: flex;
       flex-flow: column nowrap;
       gap: 1rem;
-      padding: 1.25rem; }
+      padding: 1rem; }
       .main-navigation-mobile__drop-menu--links > li > a {
         text-decoration: none;
         color: #eef1f6;
@@ -555,14 +569,41 @@ body {
         align-self: center; } }
     .main-hero__content-hero h1 {
       text-transform: uppercase;
-      font-size: 2.5rem;
+      font-size: 1.75rem;
       text-align: center;
       font-family: "Roboto", sans-serif;
       color: #eef1f6;
       font-weight: 300; }
-      .main-hero__content-hero h1 > span {
+      .main-hero__content-hero h1 > span,
+      .main-hero__content-hero h1 ul {
         font-family: "Nunito Sans", sans-serif;
         font-weight: 900; }
+      .main-hero__content-hero h1 ul {
+        list-style: none;
+        overflow: hidden;
+        height: 109px; }
+      .main-hero__content-hero h1 .switch-text {
+        display: inline-block;
+        position: relative;
+        top: 0; }
+        .main-hero__content-hero h1 .switch-text:not(:nth-child(1)) {
+          display: none; }
+        @media only screen and (min-width: 1200px) {
+          .main-hero__content-hero h1 .switch-text:nth-child(1) {
+            opacity: 0;
+            animation: slide 12s steps(4) infinite, text-switch 12s infinite ease-in-out; }
+          .main-hero__content-hero h1 .switch-text:nth-child(2) {
+            display: inline-block;
+            opacity: 0;
+            animation: slide 12s steps(4) infinite, text-switch 12s 3s infinite ease-in-out; }
+          .main-hero__content-hero h1 .switch-text:nth-child(3) {
+            display: inline-block;
+            opacity: 0;
+            animation: slide 12s steps(4) infinite, text-switch 12s 6s infinite ease-in-out; }
+          .main-hero__content-hero h1 .switch-text:nth-child(4) {
+            display: inline-block;
+            opacity: 0;
+            animation: slide 12s steps(4) infinite, text-switch 12s 9s infinite ease-in-out; } }
       @media only screen and (min-width: 758px) {
         .main-hero__content-hero h1 {
           font-size: 3rem; } }

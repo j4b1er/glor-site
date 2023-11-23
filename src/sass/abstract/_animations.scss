@@ -49,3 +49,27 @@
     transform: translateX(0);
   }
 }
+
+@keyframes slide {
+  100% {
+    top: -436px;
+  }
+}
+
+@keyframes text-switch {
+  5% {
+    opacity: 1;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
