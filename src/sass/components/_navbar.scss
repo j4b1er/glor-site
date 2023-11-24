@@ -221,23 +221,8 @@
     padding: 2rem 1rem;
 
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
     gap: 1rem;
-
-    @media only screen and (max-width: 1200px) {
-      grid-template-columns: repeat(3, 1fr);
-      padding: 1.5rem 0.5rem;
-    }
-
-    @media only screen and (max-width: 992px) {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-    }
-
-    @media only screen and (max-width: 790px) {
-      grid-template-columns: 1fr;
-      gap: 0.5rem;
-    }
   }
 
   &__dropdown-card {
