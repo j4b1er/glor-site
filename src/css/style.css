@@ -481,7 +481,7 @@ body {
 .grid-cards {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
   grid-auto-rows: 150px;
   padding-top: 2rem;
   position: relative; }
@@ -497,8 +497,9 @@ body {
     .grid-cards__card:hover {
       background-attachment: fixed;
       background-image: radial-gradient(circle at var(--x, 0) var(--y, 0), rgba(164, 238, 21, 0.15), rgba(164, 238, 21, 0.05) 10rem); }
-    .grid-cards__card:hover .grid-cards__card--img {
-      opacity: 1; }
+    .grid-cards__card:hover .grid-cards__card--icon-container--icon {
+      background-color: #a4ee15;
+      fill: #1f1f1f; }
     .grid-cards__card::after {
       content: "";
       position: absolute;
@@ -511,8 +512,8 @@ body {
     .grid-cards__card--content {
       display: flex;
       flex-flow: column nowrap;
+      align-self: flex-end;
       gap: 0.5rem;
-      width: 60%;
       padding: 1rem; }
       .grid-cards__card--content h3 {
         color: #eef1f6;
@@ -522,18 +523,21 @@ body {
         font-weight: 500;
         opacity: 0.5;
         font-size: 1rem; }
-    .grid-cards__card--img-container {
-      align-self: stretch;
+    .grid-cards__card--icon-container {
+      align-self: flex-start;
       border-radius: 0 calc(1rem - 1px) calc(1rem - 1px) 0;
-      overflow: hidden;
-      width: 40%; }
-    .grid-cards__card--img {
-      width: 100%;
-      height: 100%;
-      opacity: 0.6;
-      object-position: 10% 100%;
-      object-fit: cover;
-      transition: opacity 0.2s ease-in-out; }
+      position: relative; }
+      .grid-cards__card--icon-container--icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 60px;
+        width: 60px;
+        border-radius: 0 calc(1rem - 1px) 0 calc(1rem - 1px);
+        padding: 1rem;
+        fill: #eef1f6;
+        background-color: #383838;
+        transition: all 0.2s ease-in-out; }
 
 .main-hero {
   background-color: #121212;
