@@ -1,5 +1,6 @@
 import { Dropdown, MobileMenu, DropdownMobile } from "./components/navbar";
 import { Card, grid } from "./components/grid-cards";
+import { Slider } from "./components/infinite-slider";
 
 //const variables
 const dropdownBtn = document.querySelector("#dropdown-btn");
@@ -17,3 +18,6 @@ dropdownBtnMobile.addEventListener("click", () =>
 );
 
 grid.addEventListener("mousemove", (e) => Card(e));
+
+//partners slider
+Slider();

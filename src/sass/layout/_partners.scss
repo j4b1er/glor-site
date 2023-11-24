@@ -1,4 +1,47 @@
 .partners-section {
-  background-color: $color-black-100;
-  padding: 2rem 0;
+  background-color: $color-black-600;
+
+  &__container {
+    // max-width: $main-max-width;
+    // margin: 0 auto;
+    overflow: hidden;
+    padding: 2rem 0;
+    display: flex;
+
+    &:hover .partners-section__container--slider {
+      animation-play-state: paused;
+    }
+
+    @media only screen and (min-width: 790px) {
+      padding: 5rem 0;
+    }
+
+    &--slider {
+      list-style: none;
+
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 320px;
+
+      animation: slide-show 60s infinite linear;
+
+      &-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: 150px;
+
+        & img {
+          height: 100%;
+          width: auto;
+          filter: grayscale(100%);
+
+          &:hover {
+            filter: grayscale(0%);
+          }
+        }
+      }
+    }
+  }
 }

@@ -47,6 +47,12 @@
   100% {
     opacity: 0; } }
 
+@keyframes slide-show {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(-100%); } }
+
 .logo-accent-piece {
   fill: #a4ee15; }
 
@@ -682,8 +688,33 @@ body {
           align-self: flex-start; }
 
 .partners-section {
-  background-color: #383838;
-  padding: 2rem 0; }
+  background-color: #1f1f1f; }
+  .partners-section__container {
+    overflow: hidden;
+    padding: 2rem 0;
+    display: flex; }
+    .partners-section__container:hover .partners-section__container--slider {
+      animation-play-state: paused; }
+    @media only screen and (min-width: 790px) {
+      .partners-section__container {
+        padding: 5rem 0; } }
+    .partners-section__container--slider {
+      list-style: none;
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 320px;
+      animation: slide-show 60s infinite linear; }
+      .partners-section__container--slider-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 150px; }
+        .partners-section__container--slider-item img {
+          height: 100%;
+          width: auto;
+          filter: grayscale(100%); }
+          .partners-section__container--slider-item img:hover {
+            filter: grayscale(0%); }
 
 .services-section {
   position: relative;
