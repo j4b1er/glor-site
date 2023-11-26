@@ -747,3 +747,7 @@ body {
       @media only screen and (min-width: 992px) {
         .services-section__container--title {
           font-size: 4rem; } }
+
+.gogreen-section {
+  background: linear-gradient(180deg, #121212 0%, #eef1f6 50%);
+  min-height: 100vh; }

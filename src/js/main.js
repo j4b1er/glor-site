@@ -9,15 +9,19 @@ const hamburgerBtn = document.querySelector(
 );
 const dropdownBtnMobile = document.querySelector("#mobile-dropdown-btn");
 
+//Dropdown menu button on Navbar for Desktop and tablet screens
 dropdownBtn.addEventListener("click", () => Dropdown(dropdownBtn));
 
+//Hamburger menu button on Navbar for mobile devices
 hamburgerBtn.addEventListener("click", () => MobileMenu(hamburgerBtn));
 
+//Dropdown menu button on Navbar for mobile screens
 dropdownBtnMobile.addEventListener("click", () =>
   DropdownMobile(dropdownBtnMobile)
 );
 
+//Services grid area for hover effects
 grid.addEventListener("mousemove", (e) => Card(e));
 
-//partners slider
+//Initiate Partners slider
 Slider();

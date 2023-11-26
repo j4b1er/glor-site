@@ -1,0 +1,15 @@
+.gogreen-section {
+  //   background: linear-gradient(
+  //     to bottom,
+  //     $color-black-900,
+  //     $color-primary-100 30%
+  //   );
+  background: linear-gradient(
+    180deg,
+    $color-black-900 0%,
+    // $color-black-600 15%,
+    // $color-black-100 30%,
+    $color-primary-100 50%
+  );
+  min-height: 100vh;
+}
