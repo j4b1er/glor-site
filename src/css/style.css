@@ -749,5 +749,9 @@ body {
           font-size: 4rem; } }
 
 .gogreen-section {
-  background: linear-gradient(180deg, #121212 0%, #eef1f6 50%);
+  background: linear-gradient(180deg, #121212 0%, #383838 10%, #eef1f6 30%);
   min-height: 100vh; }
+
+.footer-section {
+  background-color: #121212;
+  min-height: 500px; }
