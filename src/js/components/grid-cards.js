@@ -1,6 +1,6 @@
 export const grid = document.querySelector("#grid-container");
 
 export function Card(e) {
-  grid.style.setProperty("--x", e.x + "px");
-  grid.style.setProperty("--y", e.y + "px");
+  grid.style.setProperty("--x-grid", e.x + "px");
+  grid.style.setProperty("--y-grid", e.y + "px");
 }

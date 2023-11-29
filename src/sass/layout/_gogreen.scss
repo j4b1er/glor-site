@@ -1,9 +1,6 @@
 .gogreen-section {
-  //   background: linear-gradient(
-  //     to bottom,
-  //     $color-black-900,
-  //     $color-primary-100 30%
-  //   );
+  position: relative;
+
   background: linear-gradient(
     180deg,
     $color-black-900 0%,
@@ -11,4 +8,23 @@
     $color-primary-100 30%
   );
   min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__mountain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(var(--y-parallax));
+  }
+
+  &__title {
+    font-size: 2rem;
+    background-color: red;
+    padding: 1rem;
+  }
 }

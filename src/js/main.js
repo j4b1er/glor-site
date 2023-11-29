@@ -1,6 +1,7 @@
 import { Dropdown, MobileMenu, DropdownMobile } from "./components/navbar";
 import { Card, grid } from "./components/grid-cards";
 import { Slider } from "./components/infinite-slider";
+import { Parallax } from "./components/parallax-gogreen";
 
 //const variables
 const dropdownBtn = document.querySelector("#dropdown-btn");
@@ -25,3 +26,6 @@ grid.addEventListener("mousemove", (e) => Card(e));
 
 //Initiate Partners slider
 Slider();
+
+//Initiate Parallax items from GoGreen
+Parallax();

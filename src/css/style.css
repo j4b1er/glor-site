@@ -494,7 +494,7 @@ body {
     @media only screen and (min-width: 790px) {
       .grid-cards__card:hover {
         background-attachment: fixed;
-        background-image: radial-gradient(circle at var(--x, 0) var(--y, 0), rgba(164, 238, 21, 0.15), rgba(164, 238, 21, 0.05) 10rem); }
+        background-image: radial-gradient(circle at var(--x-grid, 0) var(--y-grid, 0), rgba(164, 238, 21, 0.15), rgba(164, 238, 21, 0.05) 10rem); }
       .grid-cards__card:hover .grid-cards__card--icon-container--icon {
         background-color: #a4ee15;
         fill: #1f1f1f; }
@@ -504,7 +504,7 @@ body {
         inset: -2px;
         border-radius: 1rem;
         background-attachment: fixed;
-        background-image: radial-gradient(circle at var(--x, 0) var(--y, 0), rgba(164, 238, 21, 0.75), transparent 5rem);
+        background-image: radial-gradient(circle at var(--x-grid, 0) var(--y-grid, 0), rgba(164, 238, 21, 0.75), transparent 5rem);
         pointer-events: none;
         z-index: -1; } }
     .grid-cards__card--content {
@@ -749,8 +749,23 @@ body {
           font-size: 4rem; } }
 
 .gogreen-section {
+  position: relative;
   background: linear-gradient(180deg, #121212 0%, #383838 10%, #eef1f6 30%);
-  min-height: 100vh; }
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .gogreen-section__mountain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(var(--y-parallax)); }
+  .gogreen-section__title {
+    font-size: 2rem;
+    background-color: red;
+    padding: 1rem; }
 
 .footer-section {
   background-color: #121212;
