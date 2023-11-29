@@ -5,13 +5,22 @@
     180deg,
     $color-black-900 0%,
     $color-black-100 10%,
-    $color-primary-100 30%
+    $color-primary-400 30%
   );
   min-height: 100vh;
 
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
+
+  &__clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
 
   &__mountain {
     position: absolute;
@@ -19,12 +28,20 @@
     left: 0;
     width: 100%;
     height: 100%;
-    transform: translateY(var(--y-parallax));
+    z-index: 3;
   }
 
   &__title {
     font-size: 2rem;
-    background-color: red;
-    padding: 1rem;
+    background-color: rgba($color-black-900, 0.5);
+    backdrop-filter: blur(20px);
+    padding: 10rem;
+    z-index: 2;
+    border-radius: 1rem;
+    transform: translateY(var(--y-parallax));
+
+    & > span {
+      z-index: 100;
+    }
   }
 }
