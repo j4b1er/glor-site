@@ -91,9 +91,17 @@
   }
 }
 
-.btn-light-hole {
-  background-color: transparent;
-  border: 1px solid $color-primary-100;
+.btn-dark {
+  background-color: $color-primary-100;
+  color: $color-black-900 !important;
+
+  & > span {
+    z-index: 1;
+
+    & svg {
+      fill: $color-black-900;
+    }
+  }
 }
 
 .flip-arrow-up {

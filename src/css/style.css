@@ -108,9 +108,13 @@
   .btn-light:hover:after {
     transform: rotate(45deg) translateY(-10%); }
 
-.btn-light-hole {
-  background-color: transparent;
-  border: 1px solid #eef1f6; }
+.btn-dark {
+  background-color: #eef1f6;
+  color: #121212 !important; }
+  .btn-dark > span {
+    z-index: 1; }
+    .btn-dark > span svg {
+      fill: #121212; }
 
 .flip-arrow-up {
   transform: rotate(90deg); }
@@ -274,6 +278,7 @@ body {
   .main-navigation__dropdown {
     width: 100%;
     background-color: #121212;
+    border-bottom: 1px solid #1f1f1f;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1); }
     .main-navigation__dropdown[data-visible="false"] {
       display: none; }
