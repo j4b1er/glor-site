@@ -585,6 +585,9 @@ body {
       font-family: "Roboto", sans-serif;
       color: #eef1f6;
       font-weight: 300; }
+      .main-hero__content-hero h1::selection {
+        background: #a4ee15;
+        color: #121212; }
       .main-hero__content-hero h1 > span,
       .main-hero__content-hero h1 ul {
         font-family: "Nunito Sans", sans-serif;
@@ -644,6 +647,9 @@ body {
       @media only screen and (min-width: 500px) {
         .about-section__container--subheader {
           font-size: 1rem; } }
+      .about-section__container--subheader::selection {
+        background: #a4ee15;
+        color: #121212; }
     .about-section__container--title {
       color: #121212;
       font-size: 2rem;
@@ -657,6 +663,9 @@ body {
       @media only screen and (min-width: 992px) {
         .about-section__container--title {
           font-size: 4rem; } }
+      .about-section__container--title::selection {
+        background: #a4ee15;
+        color: #121212; }
     .about-section__container--content {
       display: flex;
       flex-flow: column nowrap;
@@ -676,6 +685,9 @@ body {
         flex-flow: column nowrap; }
         .about-section__container--content aside p {
           line-height: 1.5rem; }
+          .about-section__container--content aside p::selection {
+            background: #a4ee15;
+            color: #121212; }
         .about-section__container--content aside ul {
           list-style: none;
           margin-top: 1rem;
@@ -685,6 +697,9 @@ body {
             align-items: center;
             gap: 0.5rem;
             margin-bottom: 0.5rem; }
+            .about-section__container--content aside ul li::selection {
+              background: #a4ee15;
+              color: #121212; }
           .about-section__container--content aside ul li::before {
             content: "";
             background-image: url(../media/square-check-solid.svg);
@@ -743,6 +758,9 @@ body {
       @media only screen and (min-width: 500px) {
         .services-section__container--subheader {
           font-size: 1rem; } }
+      .services-section__container--subheader::selection {
+        background: #a4ee15;
+        color: #121212; }
     .services-section__container--title {
       color: #eef1f6;
       font-size: 2rem;
@@ -756,6 +774,9 @@ body {
       @media only screen and (min-width: 992px) {
         .services-section__container--title {
           font-size: 4rem; } }
+      .services-section__container--title::selection {
+        background: #a4ee15;
+        color: #121212; }
 
 .gogreen-section {
   position: relative;
@@ -801,8 +822,14 @@ body {
       @media only screen and (min-width: 992px) {
         .gogreen-section__container--title {
           font-size: 4rem; } }
+      .gogreen-section__container--title::selection {
+        background: #a4ee15;
+        color: #121212; }
       .gogreen-section__container--title > span {
         display: block; }
+        .gogreen-section__container--title > span::selection {
+          background: #a4ee15;
+          color: #121212; }
 
 .footer-section {
   background-color: #121212;

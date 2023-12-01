@@ -58,8 +58,18 @@
         font-size: 4rem;
       }
 
+      &::selection {
+        background: $color-green-accent-100;
+        color: $color-black-900;
+      }
+
       & > span {
         display: block;
+
+        &::selection {
+          background: $color-green-accent-100;
+          color: $color-black-900;
+        }
       }
     }
   }

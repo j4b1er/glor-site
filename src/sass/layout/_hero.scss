@@ -61,6 +61,11 @@
         color: $color-primary-100;
         font-weight: 300;
 
+        &::selection {
+          background: $color-green-accent-100;
+          color: $color-black-900;
+        }
+
         & > span,
         & ul {
           font-family: "Nunito Sans", sans-serif;
