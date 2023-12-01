@@ -91,6 +91,11 @@
   }
 }
 
+.btn-light-hole {
+  background-color: transparent;
+  border: 1px solid $color-primary-100;
+}
+
 .flip-arrow-up {
   transform: rotate(90deg);
 }
