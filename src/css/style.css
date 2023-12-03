@@ -751,7 +751,7 @@ body {
     position: relative; }
     @media only screen and (min-width: 790px) {
       .services-section__container {
-        padding: 5rem 1rem; } }
+        padding: 5rem 1rem 2rem 1rem; } }
     .services-section__container--subheader {
       color: #93d613;
       font-size: 0.75rem; }
@@ -830,6 +830,12 @@ body {
         .gogreen-section__container--title > span::selection {
           background: #a4ee15;
           color: #121212; }
+    .gogreen-section__container--description {
+      color: #dfe4ea;
+      max-width: 600px; }
+      .gogreen-section__container--description::selection {
+        background: #a4ee15;
+        color: #121212; }
 
 .footer-section {
   background-color: #121212;

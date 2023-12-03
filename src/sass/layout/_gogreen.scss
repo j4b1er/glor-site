@@ -72,5 +72,15 @@
         }
       }
     }
+
+    &--description {
+      color: $color-primary-300;
+      max-width: 600px;
+
+      &::selection {
+        background: $color-green-accent-100;
+        color: $color-black-900;
+      }
+    }
   }
 }
