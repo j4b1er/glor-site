@@ -40,8 +40,7 @@
 
       &-desc {
         font-weight: 300;
-        color: $color-primary-100;
-        opacity: 0.8;
+        color: $color-primary-200;
 
         max-width: 320px;
 
@@ -71,8 +70,7 @@
             text-decoration: none;
 
             font-weight: 300;
-            color: $color-primary-100;
-            opacity: 0.8;
+            color: $color-primary-200;
 
             &:hover {
               color: $color-green-accent-100;
@@ -96,7 +94,7 @@
           align-items: center;
           gap: 0.5rem;
 
-          color: $color-primary-100;
+          color: $color-primary-200;
           text-decoration: none;
           font-weight: 320;
 
@@ -117,14 +115,30 @@
     }
 
     &--bottom {
-      background-color: $color-primary-100;
-      box-shadow: 0 0 0 100vmax $color-primary-100;
+      display: flex;
+      justify-content: space-between;
+
+      background-color: $color-black-600;
+      box-shadow: 0 0 0 100vmax $color-black-600;
       clip-path: inset(0 -100vmax);
 
-      padding: 2rem 1rem;
+      padding: 1rem 1rem;
 
-      @media only screen and (min-width: 790px) {
-        padding: 1rem 1rem;
+      &-rights {
+        color: $color-primary-100;
+      }
+
+      &-links {
+        color: $color-primary-100;
+
+        & > a {
+          text-decoration: none;
+          color: inherit;
+
+          &:hover {
+            color: $color-green-accent-100;
+          }
+        }
       }
     }
   }
