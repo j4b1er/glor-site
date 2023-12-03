@@ -2,13 +2,15 @@ const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        let animationType = entry.target.getAttribute("animation");
-        let animationThreshold = entry.target.getAttribute("threshold");
-        entry.target.classList.add(animationType);
+        let animateChildArr = entry.target.querySelectorAll("[animation]");
+        animateChildArr.forEach((child) => {
+          let animationType = child.getAttribute("animation");
+          child.classList.add(animationType);
+        });
       }
     });
   },
-  { threshold: 0.4 }
+  { threshold: 0.5 }
 );
 
 export default observer;

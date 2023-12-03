@@ -9,7 +9,7 @@ const hamburgerBtn = document.querySelector(
   ".main-navigation-mobile__top-menu-hamburger"
 );
 const dropdownBtnMobile = document.querySelector("#mobile-dropdown-btn");
-const tobeAnimated = document.querySelectorAll("[animation]");
+const tobeAnimated = document.querySelectorAll("[animate]");
 
 //Dropdown menu button on Navbar for Desktop and tablet screens
 dropdownBtn.addEventListener("click", () => Dropdown(dropdownBtn));
