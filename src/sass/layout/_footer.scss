@@ -1,5 +1,131 @@
 .footer-section {
   background-color: $color-black-900;
-  min-height: 500px;
-  z-index: 10;
+
+  font-family: "Nunito Sans", sans-serif;
+
+  &__container {
+    max-width: $main-max-width;
+    margin: 0 auto;
+
+    &--top {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2rem;
+
+      padding: 2rem 1rem;
+
+      @media only screen and (min-width: 790px) {
+        padding: 5rem 1rem;
+      }
+
+      &-description {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1rem;
+      }
+
+      &-logo a {
+        display: flex;
+        align-items: center;
+
+        & svg {
+          height: 1.5rem;
+
+          @media only screen and (min-width: 500px) {
+            height: 2rem;
+          }
+        }
+      }
+
+      &-desc {
+        font-weight: 300;
+        color: $color-primary-100;
+        opacity: 0.8;
+
+        max-width: 320px;
+
+        &::selection {
+          background: $color-green-accent-100;
+          color: $color-black-900;
+        }
+      }
+
+      &-links {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1rem;
+
+        & > h3 {
+          color: $color-primary-100;
+        }
+
+        & > ul {
+          list-style: none;
+
+          display: flex;
+          flex-flow: column nowrap;
+          gap: 0.5rem;
+
+          & > li a {
+            text-decoration: none;
+
+            font-weight: 300;
+            color: $color-primary-100;
+            opacity: 0.8;
+
+            &:hover {
+              color: $color-green-accent-100;
+            }
+          }
+        }
+      }
+
+      &-contact {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 0.5rem;
+
+        & > h3 {
+          color: $color-primary-100;
+          margin-bottom: 0.5rem;
+        }
+
+        & > a {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+
+          color: $color-primary-100;
+          text-decoration: none;
+          font-weight: 320;
+
+          &:first-of-type {
+            max-width: 320px;
+          }
+
+          &:hover {
+            color: $color-green-accent-100;
+          }
+
+          & svg {
+            height: 1rem;
+            fill: $color-green-accent-100;
+          }
+        }
+      }
+    }
+
+    &--bottom {
+      background-color: $color-primary-100;
+      box-shadow: 0 0 0 100vmax $color-primary-100;
+      clip-path: inset(0 -100vmax);
+
+      padding: 2rem 1rem;
+
+      @media only screen and (min-width: 790px) {
+        padding: 1rem 1rem;
+      }
+    }
+  }
 }
