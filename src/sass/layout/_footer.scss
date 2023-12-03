@@ -116,13 +116,19 @@
 
     &--bottom {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
 
       background-color: $color-black-600;
       box-shadow: 0 0 0 100vmax $color-black-600;
       clip-path: inset(0 -100vmax);
 
       padding: 1rem 1rem;
+
+      @media only screen and (min-width: 500px) {
+        justify-content: space-between;
+      }
 
       &-rights {
         color: $color-primary-100;
