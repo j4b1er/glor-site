@@ -1,4 +1,4 @@
-const observer = new IntersectionObserver(
+export const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -10,7 +10,5 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.5 }
+  { threshold: 0.4 }
 );
-
-export default observer;

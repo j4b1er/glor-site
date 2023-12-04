@@ -1,7 +1,7 @@
 import { Dropdown, MobileMenu, DropdownMobile } from "./components/navbar";
 import { Card, grid } from "./components/grid-cards";
 import { Slider } from "./components/infinite-slider";
-import observer from "./utilities/intersection-observer";
+import { observer } from "./utilities/intersection-observer";
 
 //const variables
 const dropdownBtn = document.querySelector("#dropdown-btn");
@@ -28,5 +28,5 @@ grid.addEventListener("mousemove", (e) => Card(e));
 //Initiate Partners slider
 Slider();
 
-//pass the arr with all the elements with attribute "animation" to be animated
+//pass the array with all the sections with attribute "animation" to be animated
 tobeAnimated.forEach((elm) => observer.observe(elm));
