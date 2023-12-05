@@ -72,10 +72,16 @@ export function MobileMenu(hamburgerBtn) {
     hamburgerBtn.setAttribute("aria-expanded", true);
     mobileMenuList.setAttribute("data-visible", true);
 
+    //when mobile menu is open remove scroll from body
+    document.body.classList.add("no-scroll");
+
     contactContainer.classList.replace("opacity-none", "slide-in-from-left");
   } else {
     mobileMenuList.classList.replace("fade-in", "fade-out");
     hamburgerBtn.setAttribute("aria-expanded", false);
+
+    //when mobile menu is closed add scroll from body
+    document.body.classList.remove("no-scroll");
 
     HideAfterAnimationEnds(mobileMenuList);
   }

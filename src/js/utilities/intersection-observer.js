@@ -2,7 +2,7 @@ const winSize = window.innerWidth;
 let th = 0.5;
 
 if (winSize <= 500) {
-  th = 0.3;
+  th = 0.2;
 }
 
 export const observer = new IntersectionObserver(
@@ -13,7 +13,6 @@ export const observer = new IntersectionObserver(
         animateChildArr.forEach((child) => {
           let animationType = child.getAttribute("animation");
           child.classList.add(animationType);
-          console.log(winSize);
         });
       }
     });

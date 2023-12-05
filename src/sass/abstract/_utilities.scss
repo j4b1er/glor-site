@@ -12,6 +12,10 @@
   fill: $color-primary-100;
 }
 
+.no-scroll {
+  overflow-y: hidden;
+}
+
 .xsm-hide {
   @media only screen and (max-width: 500px) {
     display: none !important;

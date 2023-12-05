@@ -81,7 +81,10 @@
     flex-flow: column nowrap;
     justify-content: space-between;
 
-    height: 100vh;
+    overflow-y: hidden;
+
+    height: calc(100vh - 7rem);
+    // height: 100vh;
 
     &[data-visible="false"] {
       display: none;
@@ -152,7 +155,8 @@
       background-color: $color-green-accent-100;
 
       gap: 0.5rem;
-      padding: 1rem 1.25rem 4.5rem 1.25rem;
+      // padding: 1rem 1.25rem 4.5rem 1.25rem;
+      padding: 1rem;
 
       & li a {
         display: flex;
