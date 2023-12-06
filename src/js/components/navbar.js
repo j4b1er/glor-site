@@ -36,12 +36,12 @@ export function Dropdown(ddBtn) {
     dropdownBtn.setAttribute("aria-expanded", true);
     dropdownMenu.setAttribute("data-visible", true);
     dropdownMenu.classList.add("fade-in");
-    dropdownBtn.classList.toggle("nav-active");
+    dropdownBtn.classList.toggle("nav-selected");
     addGlobalListener();
   } else {
     dropdownMenu.classList.replace("fade-in", "fade-out");
     dropdownBtn.setAttribute("aria-expanded", false);
-    dropdownBtn.classList.toggle("nav-active");
+    dropdownBtn.classList.toggle("nav-selected");
 
     HideAfterAnimationEnds(dropdownMenu);
 
@@ -53,7 +53,7 @@ function handleOutsideClick(e) {
   if (!header.contains(e.target)) {
     dropdownMenu.classList.replace("fade-in", "fade-out");
     dropdownBtn.setAttribute("aria-expanded", false);
-    dropdownBtn.classList.toggle("nav-active");
+    dropdownBtn.classList.toggle("nav-selected");
 
     HideAfterAnimationEnds(dropdownMenu);
 

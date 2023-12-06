@@ -166,6 +166,11 @@
 
 .nav-active {
   background-color: #1f1f1f !important;
+  color: #a4ee15 !important;
+  border-radius: 0.5rem; }
+
+.nav-selected {
+  background-color: #1f1f1f !important;
   border-radius: 0.5rem; }
 
 .no-decoration {

@@ -111,6 +111,12 @@
 
 .nav-active {
   background-color: $color-black-600 !important;
+  color: $color-green-accent-100 !important;
+  border-radius: 0.5rem;
+}
+
+.nav-selected {
+  background-color: $color-black-600 !important;
   border-radius: 0.5rem;
 }
 
