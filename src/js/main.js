@@ -1,8 +1,8 @@
-// import { Dropdown, MobileMenu, DropdownMobile } from "./components/navbar";
-// import { Card, grid } from "./components/grid-cards";
-// import { Slider } from "./components/infinite-slider";
-// import { observer } from "./utilities/intersection-observer";
-// import handleLocation from "./utilities/router";
+// import { Dropdown, MobileMenu, DropdownMobile } from "./components/navbar.js";
+// import { Card, grid } from "./components/grid-cards.js";
+// import { Slider } from "./components/infinite-slider.js";
+// import { observer } from "./utilities/intersection-observer.js";
+import { router, navigate } from "./utilities/router.js";
 
 // //const variables
 // const dropdownBtn = document.querySelector("#dropdown-btn");
@@ -32,27 +32,19 @@
 // //pass the array with all the sections with attribute "animation" to be animated
 // tobeAnimated.forEach((elm) => observer.observe(elm));
 
-const route = (event) => {
-  event = event || window.event;
-  event.preventDefault();
-  window.history.pushState({}, "", event.target.href);
-  handleLocation();
-};
-
-const routes = {
-  "/": "./pages/index.html",
-  "/about": "./pages/about.html",
-};
-
-const handleLocation = async () => {
-  const path = window.location.pathname;
-  const route = routes[path];
-  const html = await fetch(route).then((data) => data.text());
-  console.log(html);
-  document.getElementById("main-page").innerHTML = html;
-};
-
-window.onpopstate = handleLocation;
-window.route = route;
-
-handleLocation();
+document.addEventListener("DOMContentLoaded", () => {
+  // document.body.addEventListener("click", (e) => {
+  //   if (e.target.matches("[data-link]")) {
+  //     e.preventDefault();
+  //     navigate(e.target.href);
+  //   }
+  // });
+  const routeLinks = document.querySelectorAll("[data-link]");
+  routeLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      navigate(link.href);
+    });
+  });
+  router();
+});
