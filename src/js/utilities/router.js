@@ -55,14 +55,21 @@ export const router = async () => {
 
   //   console.log(routeFound);
 
-  const handlePage = async () => {
-    let routeFound = routes.find((route) => route.path === location.pathname);
-    if (!routeFound) routeFound = routes[5];
-    const pageFetch = await fetch(routeFound.page).then((data) => data.text());
-    document.getElementById("main-page").innerHTML = pageFetch;
-  };
+  // const handlePage = async () => {
+  //   let routeFound = routes.find((route) => route.path === location.pathname);
+  //   if (!routeFound) routeFound = routes[5];
+  //   let pageFetch = await fetch(routeFound.page).then((data) => data.text());
+  //   document.getElementById("main-page").innerHTML = pageFetch;
+  // };
 
-  handlePage();
+  let routeFound = routes.find((route) => route.path === location.pathname);
+  if (!routeFound) routeFound = routes[5];
+  let pageFetch = await fetch(routeFound.page).then((data) => data.text());
+  document.getElementById("main-page").innerHTML = pageFetch;
+
+  console.log("router");
+
+  // handlePage();
 
   //   console.log(match.route.view());
 };
