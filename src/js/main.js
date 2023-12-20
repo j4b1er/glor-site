@@ -1,20 +1,28 @@
 import { Dropdown, MobileMenu, DropdownMobile } from "./components/navbar.js";
-// import { Card, grid } from "./components/grid-cards.js";
+import { Grid } from "./components/grid-cards.js";
 import { Slider } from "./components/infinite-slider.js";
 import { observer } from "./utilities/intersection-observer.js";
 import { router, navigate } from "./utilities/router.js";
 
-const routeLinks = document.querySelectorAll("[data-link]");
-routeLinks.forEach((link) => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-    navigate(link.href);
+document.addEventListener("DOMContentLoaded", () => {
+  const routeLinks = document.querySelectorAll("[data-link]");
+  routeLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      navigate(link.href);
+    });
   });
 });
 
 router().then(() => {
   const tobeAnimated = document.querySelectorAll("[animate]");
   tobeAnimated.forEach((elm) => observer.observe(elm));
+
+  //Services grid area for hover effects
+  Grid();
+
+  //Initiate Partners slider
+  Slider();
 });
 
 //const variables

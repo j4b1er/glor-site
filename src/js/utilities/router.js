@@ -37,24 +37,6 @@ export const router = async () => {
     },
   ];
 
-  //   const potentialMatches = routes.map((route) => {
-  //     return {
-  //       route,
-  //       isMatch: location.pathname === route.path,
-  //     };
-  //   });
-
-  //   let match = potentialMatches.find((potentialMatch) => potentialMatch.isMatch);
-
-  //   if (!match) {
-  //     match = {
-  //       route: routes[3],
-  //       isMatch: true,
-  //     };
-  //   }
-
-  //   console.log(routeFound);
-
   // const handlePage = async () => {
   //   let routeFound = routes.find((route) => route.path === location.pathname);
   //   if (!routeFound) routeFound = routes[5];
@@ -67,11 +49,7 @@ export const router = async () => {
   let pageFetch = await fetch(routeFound.page).then((data) => data.text());
   document.getElementById("main-page").innerHTML = pageFetch;
 
-  console.log("router");
-
   // handlePage();
-
-  //   console.log(match.route.view());
 };
 
 window.addEventListener("popstate", router);
