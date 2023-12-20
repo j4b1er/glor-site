@@ -1,7 +1,8 @@
 import { Dropdown, MobileMenu, DropdownMobile } from "./components/navbar.js";
 import { Grid } from "./components/grid-cards.js";
 import { Slider } from "./components/infinite-slider.js";
-import { observer } from "./utilities/intersection-observer.js";
+// import { observer } from "./utilities/intersection-observer.js";
+import { InterObserver } from "./utilities/intersection-observer.js";
 import { router, navigate } from "./utilities/router.js";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -15,8 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 router().then(() => {
-  const tobeAnimated = document.querySelectorAll("[animate]");
-  tobeAnimated.forEach((elm) => observer.observe(elm));
+  // const tobeAnimated = document.querySelectorAll("[animate]");
+  // tobeAnimated.forEach((elm) => observer.observe(elm));
+
+  InterObserver();
 
   //Services grid area for hover effects
   Grid();

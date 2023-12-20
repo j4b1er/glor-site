@@ -18,6 +18,8 @@
       color: $color-green-accent-300;
       font-size: 0.75rem;
 
+      transition: all 0.6s ease-in-out;
+
       @media only screen and (min-width: 500px) {
         font-size: 1rem;
       }
@@ -32,6 +34,8 @@
       color: $color-black-900;
       font-size: 2rem;
       font-weight: 700;
+
+      transition: all 0.6s ease-in-out;
 
       @media only screen and (min-width: 500px) {
         font-size: 2.5rem;
@@ -57,6 +61,8 @@
       gap: 1rem;
 
       margin-top: 2rem;
+
+      transition: all 0.6s ease-in-out;
 
       @media only screen and (min-width: 750px) {
         flex-flow: row nowrap;

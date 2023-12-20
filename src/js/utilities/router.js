@@ -1,9 +1,14 @@
+import { InterObserver } from "./intersection-observer.js";
+
 export const navigate = (url) => {
   history.pushState(null, null, url);
-  router();
+  // router();
+  router().then(() => {
+    InterObserver();
+  });
 };
 
-export const router = async () => {
+export async function router() {
   const routes = [
     {
       path: "/",
@@ -50,6 +55,6 @@ export const router = async () => {
   document.getElementById("main-page").innerHTML = pageFetch;
 
   // handlePage();
-};
+}
 
 window.addEventListener("popstate", router);
