@@ -8,7 +8,7 @@
 export function Grid() {
   const grid = document.querySelector("#grid-container");
 
-  grid.addEventListener("mousemove", (e) => Card(e));
+  grid && grid.addEventListener("mousemove", (e) => Card(e));
 
   function Card(e) {
     grid.style.setProperty("--x-grid", e.x + "px");

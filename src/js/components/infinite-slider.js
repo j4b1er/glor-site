@@ -4,6 +4,6 @@ export function Slider() {
   );
   const slider = document.querySelector(".partners-section__container--slider");
 
-  let sliderDuplicate = slider.cloneNode(true);
-  sliderContainer.appendChild(sliderDuplicate);
+  let sliderDuplicate = slider ? slider.cloneNode(true) : "";
+  sliderContainer && sliderContainer.appendChild(sliderDuplicate);
 }
