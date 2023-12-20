@@ -6,7 +6,7 @@ import { InterObserver } from "./utilities/intersection-observer.js";
 import { router, navigate } from "./utilities/router.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const routeLinks = document.querySelectorAll("[data-link]");
+  const routeLinks = document.querySelectorAll("[data-route]");
   routeLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault();

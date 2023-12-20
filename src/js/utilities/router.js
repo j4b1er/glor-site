@@ -42,19 +42,15 @@ export async function router() {
     },
   ];
 
-  // const handlePage = async () => {
-  //   let routeFound = routes.find((route) => route.path === location.pathname);
-  //   if (!routeFound) routeFound = routes[5];
-  //   let pageFetch = await fetch(routeFound.page).then((data) => data.text());
-  //   document.getElementById("main-page").innerHTML = pageFetch;
-  // };
-
   let routeFound = routes.find((route) => route.path === location.pathname);
   if (!routeFound) routeFound = routes[5];
-  let pageFetch = await fetch(routeFound.page).then((data) => data.text());
-  document.getElementById("main-page").innerHTML = pageFetch;
-
-  // handlePage();
+  let pageFetch = await fetch(routeFound.page);
+  let data = await pageFetch.text();
+  document.getElementById("main-page").innerHTML = data;
 }
 
-window.addEventListener("popstate", router);
+window.addEventListener("popstate", () => {
+  router().then(() => {
+    InterObserver();
+  });
+});

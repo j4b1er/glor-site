@@ -55,7 +55,7 @@
           <div class="main-navigation__main-nav-container">
             <nav class="main-navigation__main-nav-menu">
               <div class="main-navigation__main-nav-menu-logo">
-                <a href="/">
+                <a href="/" data-route>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 1043.81 178.24">
@@ -79,7 +79,7 @@
               </div>
 
               <ul class="main-navigation__main-nav-menu-links">
-                <li><a href="/about" data-link>About</a></li>
+                <li><a href="/about" data-route>About</a></li>
                 <li>
                   <button id="dropdown-btn" aria-expanded="false">
                     Services
@@ -92,11 +92,11 @@
                     </svg>
                   </button>
                 </li>
-                <li><a href="/projects">Projects</a></li>
-                <li><a href="/gogreen">Go Green</a></li>
+                <li><a href="/projects" data-route>Projects</a></li>
+                <li><a href="/gogreen" data-route>Go Green</a></li>
               </ul>
             </nav>
-            <a class="btn-light" href="./contact">
+            <a class="btn-light" href="./contact" data-route>
               <span
                 >Contact us
                 <svg
@@ -182,7 +182,7 @@
       <!-- mobile navigation -->
       <div class="main-navigation-mobile">
         <div class="main-navigation-mobile__top-menu">
-          <a href="/">
+          <a href="/" data-route>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 1043.81 178.24">
@@ -217,7 +217,7 @@
           class="main-navigation-mobile__drop-menu"
           data-visible="false">
           <ul class="main-navigation-mobile__drop-menu--links">
-            <li><a href="./about" data-link>About</a></li>
+            <li><a href="./about" data-route>About</a></li>
             <li>
               <button id="mobile-dropdown-btn" aria-expanded="false">
                 Services
@@ -240,8 +240,8 @@
                 <li><a href="#">Commercial Residential Systems</a></li>
               </ul>
             </li>
-            <li><a href="./projects">Projects</a></li>
-            <li><a href="./gogreen">Go Green</a></li>
+            <li><a href="./projects" data-route>Projects</a></li>
+            <li><a href="./gogreen" data-route>Go Green</a></li>
           </ul>
           <ul class="main-navigation-mobile__drop-menu--contact opacity-none">
             <li>
@@ -319,19 +319,19 @@
           <div class="footer-section__container--top-links">
             <h3>Quick Links</h3>
             <ul>
-              <li><a href="/" data-link>Home</a></li>
-              <li><a href="./about" data-link>About us</a></li>
-              <li><a href="./services" data-link>Services</a></li>
-              <li><a href="./projects" data-link>Projects</a></li>
-              <li><a href="./gogreen" data-link>Go Green</a></li>
-              <li><a href="./contact" data-link>Contact us</a></li>
+              <li><a href="/" data-route>Home</a></li>
+              <li><a href="./about" data-route>About us</a></li>
+              <li><a href="./services" data-route>Services</a></li>
+              <li><a href="./projects" data-route>Projects</a></li>
+              <li><a href="./gogreen" data-route>Go Green</a></li>
+              <li><a href="./contact" data-route>Contact us</a></li>
             </ul>
           </div>
 
           <div class="footer-section__container--top-links">
             <h3>Services</h3>
             <ul>
-              <li><a href="/cabling" data-link>ISP Structural Cabling</a></li>
+              <li><a href="/cabling" data-route>ISP Structural Cabling</a></li>
               <li><a href="">Data Centers</a></li>
               <li><a href="">Access Control</a></li>
               <li><a href="">Sound Masking</a></li>
