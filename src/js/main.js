@@ -1,9 +1,6 @@
 import { Dropdown, MobileMenu, DropdownMobile } from "./components/navbar.js";
-import { Grid } from "./components/grid-cards.js";
-import { Slider } from "./components/infinite-slider.js";
-// import { observer } from "./utilities/intersection-observer.js";
-import { InterObserver } from "./utilities/intersection-observer.js";
 import { router, navigate } from "./utilities/router.js";
+import { ContentComponents } from "./utilities/content-components.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const routeLinks = document.querySelectorAll("[data-route]");
@@ -16,16 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 router().then(() => {
-  // const tobeAnimated = document.querySelectorAll("[animate]");
-  // tobeAnimated.forEach((elm) => observer.observe(elm));
-
-  InterObserver();
-
-  //Services grid area for hover effects
-  Grid();
-
-  //Initiate Partners slider
-  Slider();
+  ContentComponents();
 });
 
 //const variables
@@ -46,22 +34,3 @@ hamburgerBtn.addEventListener("click", () => MobileMenu(hamburgerBtn));
 dropdownBtnMobile.addEventListener("click", () =>
   DropdownMobile(dropdownBtnMobile)
 );
-
-// //Services grid area for hover effects
-// grid.addEventListener("mousemove", (e) => Card(e));
-
-// //Initiate Partners slider
-// Slider();
-
-// document.addEventListener("DOMContentLoaded", () => {
-// document.body.addEventListener("click", (e) => {
-//   if (e.target.matches("[data-link]")) {
-//     e.preventDefault();
-//     navigate(e.target.href);
-//   }
-// });
-
-// });
-
-//pass the array with all the sections with attribute "animation" to be animated
-// tobeAnimated.forEach((elm) => observer.observe(elm));

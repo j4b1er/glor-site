@@ -1,10 +1,10 @@
-import { InterObserver } from "./intersection-observer.js";
+import { ContentComponents } from "./content-components.js";
 
 export const navigate = (url) => {
   history.pushState(null, null, url);
-  // router();
   router().then(() => {
-    InterObserver();
+    ContentComponents();
+    window.scrollTo(0, 0);
   });
 };
 
@@ -46,11 +46,13 @@ export async function router() {
   if (!routeFound) routeFound = routes[5];
   let pageFetch = await fetch(routeFound.page);
   let data = await pageFetch.text();
+  document.title = `${routeFound.title} | Glor`;
   document.getElementById("main-page").innerHTML = data;
 }
 
 window.addEventListener("popstate", () => {
   router().then(() => {
-    InterObserver();
+    ContentComponents();
+    window.scrollTo(0, 0);
   });
 });
