@@ -2,20 +2,6 @@ import { Dropdown, MobileMenu, DropdownMobile } from "./components/navbar.js";
 import { router, navigate } from "./utilities/router.js";
 import { ContentComponents } from "./utilities/content-components.js";
 
-document.addEventListener("DOMContentLoaded", () => {
-  const routeLinks = document.querySelectorAll("[data-route]");
-  routeLinks.forEach((link) => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      navigate(link.href);
-    });
-  });
-});
-
-router().then(() => {
-  ContentComponents();
-});
-
 //const variables
 const dropdownBtn = document.querySelector("#dropdown-btn");
 const hamburgerBtn = document.querySelector(
@@ -34,3 +20,20 @@ hamburgerBtn.addEventListener("click", () => MobileMenu(hamburgerBtn));
 dropdownBtnMobile.addEventListener("click", () =>
   DropdownMobile(dropdownBtnMobile)
 );
+
+document.addEventListener("DOMContentLoaded", () => {
+  const routeLinks = document.querySelectorAll("[data-route]");
+  routeLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      navigate(link.href);
+    });
+  });
+
+  async function runRouter() {
+    await router();
+    ContentComponents();
+  }
+
+  runRouter();
+});

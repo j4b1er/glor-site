@@ -13,7 +13,7 @@ export async function router() {
     {
       path: "/",
       page: "/src/pages/index.html",
-      title: "Innovetion and Hard work",
+      title: "Innovation and Hard work",
     },
     {
       path: "/about",

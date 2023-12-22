@@ -1,0 +1,40 @@
+.subpage-header {
+  background-color: $color-black-900;
+  font-family: "Nunito Sans", sans-serif;
+
+  min-height: 512px;
+  position: relative;
+
+  display: flex;
+
+  padding: 7rem 0;
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+
+    background-image: url("../media/bg-pages.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: opacity(0.5);
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-end;
+
+    width: 100%;
+
+    max-width: $main-max-width;
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    z-index: 1;
+
+    & h1 {
+      color: $color-primary-100;
+      font-size: 5rem;
+    }
+  }
+}

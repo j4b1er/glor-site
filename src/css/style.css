@@ -607,6 +607,33 @@ body {
         background-color: #383838;
         transition: all 0.2s ease-in-out; }
 
+.subpage-header {
+  background-color: #121212;
+  font-family: "Nunito Sans", sans-serif;
+  min-height: 512px;
+  position: relative;
+  display: flex;
+  padding: 7rem 0; }
+  .subpage-header__bg {
+    position: absolute;
+    inset: 0;
+    background-image: url("../media/bg-pages.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: opacity(0.5); }
+  .subpage-header__content {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    z-index: 1; }
+    .subpage-header__content h1 {
+      color: #eef1f6;
+      font-size: 5rem; }
+
 .main-hero {
   background-color: #121212;
   font-family: "Nunito Sans", sans-serif; }

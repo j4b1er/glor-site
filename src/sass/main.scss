@@ -8,6 +8,7 @@
 @import "components/navbar-mobile";
 @import "components/small-card";
 @import "components/grid-cards";
+@import "components//subpage-header";
 
 @import "layout/hero";
 @import "layout/about";
@@ -15,3 +16,5 @@
 @import "layout/services";
 @import "layout/gogreen";
 @import "layout/footer";
+
+@import "pages/about";
