@@ -13,16 +13,17 @@
     position: absolute;
     inset: 0;
 
-    background-image: url("../media/bg-pages.jpg");
+    background-image: url("../media/bg-pages-blur.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    filter: opacity(0.5);
   }
 
   &__content {
     display: flex;
-    align-items: flex-end;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    // align-items: flex-end;
 
     width: 100%;
 
@@ -34,7 +35,36 @@
 
     & h1 {
       color: $color-primary-100;
-      font-size: 5rem;
+      font-size: 4.5rem;
+
+      &::selection {
+        background: $color-green-accent-100;
+        color: $color-black-900;
+      }
+    }
+
+    &--breadcrums {
+      list-style: none;
+      display: flex;
+
+      & li {
+        color: $color-primary-300;
+
+        & a {
+          color: $color-primary-300;
+          text-decoration: none;
+
+          &:hover {
+            color: $color-green-accent-100;
+          }
+        }
+      }
+
+      & li:not(:first-child):before {
+        padding: 0.5rem;
+        color: $color-primary-300;
+        content: "/\00a0";
+      }
     }
   }
 }
