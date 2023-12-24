@@ -18,21 +18,77 @@
     width: 100%;
     position: relative;
 
+    padding: 4rem 0;
+
     &-content {
-      height: 500px;
+      height: 30rem;
+
       display: flex;
+      gap: 1rem;
       flex-flow: column nowrap;
       justify-content: center;
+
+      & > h2 {
+        font-size: 4rem;
+        color: $color-primary-100;
+      }
+
+      & > p {
+        font-weight: 300;
+        font-size: 1rem;
+        color: $color-primary-300;
+      }
     }
 
     &-image {
       min-width: 50%;
 
       & > img {
-        max-height: 500px;
+        max-height: 30rem;
         width: 100%;
         position: absolute;
         object-fit: cover;
+      }
+    }
+  }
+
+  &__second-section {
+    padding: 4rem 0;
+
+    &-grid {
+      height: 500px;
+
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto;
+      grid-template-areas:
+        "img img partners satisfaction"
+        "img img experience experience";
+
+      & > * {
+        border-radius: 1rem;
+        background-color: $color-black-300;
+      }
+
+      &--item1 {
+        grid-area: img;
+        overflow: hidden;
+
+        & > img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      &--item2 {
+        grid-area: partners;
+      }
+      &--item3 {
+        grid-area: satisfaction;
+      }
+      &--item4 {
+        grid-area: experience;
       }
     }
   }
