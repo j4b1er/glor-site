@@ -22,12 +22,25 @@ dropdownBtnMobile.addEventListener("click", () =>
 );
 
 document.addEventListener("DOMContentLoaded", () => {
-  const routeLinks = document.querySelectorAll("[data-route]");
-  routeLinks.forEach((link) => {
-    link.addEventListener("click", (e) => {
+  // const routeLinks = document.querySelectorAll("[data-route]");
+  // routeLinks.forEach((link) => {
+  //   link.addEventListener("click", (e) => {
+  //     e.preventDefault();
+  //     navigate(link.href);
+  //   });
+  // });
+
+  document.addEventListener("click", (e) => {
+    const targetElm =
+      e.target.tagName === "svg" || e.target.tagName === "SPAN"
+        ? e.target.parentNode
+        : e.target.tagName === "path"
+        ? e.target.parentNode.parentNode
+        : e.target;
+    if (targetElm.hasAttribute("data-route")) {
       e.preventDefault();
-      navigate(link.href);
-    });
+      navigate(targetElm.href);
+    }
   });
 
   async function runRouter() {

@@ -610,10 +610,17 @@ body {
 .subpage-header {
   background-color: #121212;
   font-family: "Nunito Sans", sans-serif;
-  min-height: 512px;
+  min-height: 272px;
   position: relative;
+  padding: 4rem 0;
   display: flex;
-  padding: 7rem 0; }
+  overflow: hidden; }
+  @media only screen and (min-width: 500px) {
+    .subpage-header {
+      min-height: 320px; } }
+  @media only screen and (min-width: 790px) {
+    .subpage-header {
+      min-height: 400px; } }
   .subpage-header__bg {
     position: absolute;
     inset: 0;
@@ -625,6 +632,7 @@ body {
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-end;
+    align-items: center;
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
@@ -632,22 +640,28 @@ body {
     z-index: 1; }
     .subpage-header__content h1 {
       color: #eef1f6;
-      font-size: 4.5rem; }
+      font-size: 3rem; }
       .subpage-header__content h1::selection {
         background: #a4ee15;
         color: #121212; }
+      @media only screen and (min-width: 500px) {
+        .subpage-header__content h1 {
+          font-size: 4.5rem; } }
     .subpage-header__content--breadcrums {
       list-style: none;
       display: flex; }
       .subpage-header__content--breadcrums li {
         color: #dfe4ea; }
+        .subpage-header__content--breadcrums li::selection {
+          background: #a4ee15;
+          color: #121212; }
         .subpage-header__content--breadcrums li a {
           color: #dfe4ea;
           text-decoration: none; }
           .subpage-header__content--breadcrums li a:hover {
             color: #a4ee15; }
       .subpage-header__content--breadcrums li:not(:first-child):before {
-        padding: 0.5rem;
+        padding: 0 0.5rem;
         color: #dfe4ea;
         content: "/\00a0"; }
 
@@ -1041,3 +1055,30 @@ body {
           color: inherit; }
           .footer-section__container--bottom-links > a:hover {
             color: #a4ee15; }
+
+.about-page {
+  background-color: #1f1f1f;
+  font-family: "Nunito Sans", sans-serif;
+  overflow: hidden; }
+  .about-page__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem; }
+  .about-page__first-section {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    width: 100%;
+    position: relative; }
+    .about-page__first-section-content {
+      height: 500px;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center; }
+    .about-page__first-section-image {
+      min-width: 50%; }
+      .about-page__first-section-image > img {
+        max-height: 500px;
+        width: 100%;
+        position: absolute;
+        object-fit: cover; }

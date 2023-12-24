@@ -1,0 +1,39 @@
+.about-page {
+  background-color: $color-black-600;
+  font-family: "Nunito Sans", sans-serif;
+
+  overflow: hidden;
+
+  &__container {
+    max-width: $main-max-width;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  &__first-section {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+
+    width: 100%;
+    position: relative;
+
+    &-content {
+      height: 500px;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+    }
+
+    &-image {
+      min-width: 50%;
+
+      & > img {
+        max-height: 500px;
+        width: 100%;
+        position: absolute;
+        object-fit: cover;
+      }
+    }
+  }
+}
