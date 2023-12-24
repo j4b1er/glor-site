@@ -69,6 +69,20 @@
       & > * {
         border-radius: 1rem;
         background-color: $color-black-300;
+
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+
+        & > h3 {
+          color: $color-green-accent-100;
+          font-size: 4rem;
+        }
+
+        & > p {
+          color: $color-primary-300;
+        }
       }
 
       &--item1 {
@@ -83,12 +97,27 @@
       }
       &--item2 {
         grid-area: partners;
+        padding: 1rem;
+
+        & span {
+          font-size: 2.5rem;
+        }
       }
       &--item3 {
         grid-area: satisfaction;
+        padding: 1rem;
+
+        & span {
+          font-size: 1.5rem;
+        }
       }
       &--item4 {
         grid-area: experience;
+        padding: 1rem;
+
+        & span {
+          font-size: 2.5rem;
+        }
       }
     }
   }

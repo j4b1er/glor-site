@@ -1102,7 +1102,16 @@ body {
       grid-template-areas: "img img partners satisfaction" "img img experience experience"; }
       .about-page__second-section-grid > * {
         border-radius: 1rem;
-        background-color: #252525; }
+        background-color: #252525;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center; }
+        .about-page__second-section-grid > * > h3 {
+          color: #a4ee15;
+          font-size: 4rem; }
+        .about-page__second-section-grid > * > p {
+          color: #dfe4ea; }
       .about-page__second-section-grid--item1 {
         grid-area: img;
         overflow: hidden; }
@@ -1111,8 +1120,17 @@ body {
           height: 100%;
           object-fit: cover; }
       .about-page__second-section-grid--item2 {
-        grid-area: partners; }
+        grid-area: partners;
+        padding: 1rem; }
+        .about-page__second-section-grid--item2 span {
+          font-size: 2.5rem; }
       .about-page__second-section-grid--item3 {
-        grid-area: satisfaction; }
+        grid-area: satisfaction;
+        padding: 1rem; }
+        .about-page__second-section-grid--item3 span {
+          font-size: 1.5rem; }
       .about-page__second-section-grid--item4 {
-        grid-area: experience; }
+        grid-area: experience;
+        padding: 1rem; }
+        .about-page__second-section-grid--item4 span {
+          font-size: 2.5rem; }
