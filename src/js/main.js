@@ -22,14 +22,6 @@ dropdownBtnMobile.addEventListener("click", () =>
 );
 
 document.addEventListener("DOMContentLoaded", () => {
-  // const routeLinks = document.querySelectorAll("[data-route]");
-  // routeLinks.forEach((link) => {
-  //   link.addEventListener("click", (e) => {
-  //     e.preventDefault();
-  //     navigate(link.href);
-  //   });
-  // });
-
   document.addEventListener("click", (e) => {
     const targetElm =
       e.target.tagName === "svg" || e.target.tagName === "SPAN"

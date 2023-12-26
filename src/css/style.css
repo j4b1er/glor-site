@@ -665,6 +665,45 @@ body {
         color: #dfe4ea;
         content: "/\00a0"; }
 
+.lets-talk {
+  font-family: "Nunito Sans", sans-serif;
+  background-color: #1f1f1f;
+  background: radial-gradient(farthest-side at 50% -200%, #383838 20%, #252525 25%, #121212); }
+  .lets-talk__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 5rem 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-flow: column nowrap;
+    align-items: left; }
+    @media only screen and (min-width: 750px) {
+      .lets-talk__container {
+        display: flex;
+        gap: 1rem;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between; } }
+  .lets-talk__content--subheader {
+    color: #93d613;
+    font-size: 0.75rem; }
+    @media only screen and (min-width: 500px) {
+      .lets-talk__content--subheader {
+        font-size: 1rem; } }
+  .lets-talk__content--title {
+    color: #eef1f6;
+    font-size: 2rem;
+    font-weight: 700; }
+    @media only screen and (min-width: 500px) {
+      .lets-talk__content--title {
+        font-size: 2.5rem; } }
+    @media only screen and (min-width: 750px) {
+      .lets-talk__content--title {
+        font-size: 3.25rem; } }
+    @media only screen and (min-width: 992px) {
+      .lets-talk__content--title {
+        font-size: 4rem; } }
+
 .main-hero {
   background-color: #121212;
   font-family: "Nunito Sans", sans-serif; }
@@ -1057,44 +1096,50 @@ body {
             color: #a4ee15; }
 
 .about-page {
-  background-color: #1f1f1f;
+  background-color: #121212;
   font-family: "Nunito Sans", sans-serif;
   overflow: hidden; }
   .about-page__container {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 1rem; }
+    padding: 4rem 1rem; }
   .about-page__first-section {
     display: flex;
     gap: 2rem;
     justify-content: center;
-    width: 100%;
-    position: relative;
-    padding: 4rem 0; }
-    .about-page__first-section-content {
-      height: 30rem;
-      display: flex;
-      gap: 1rem;
-      flex-flow: column nowrap;
-      justify-content: center; }
-      .about-page__first-section-content > h2 {
-        font-size: 4rem;
-        color: #eef1f6; }
-      .about-page__first-section-content > p {
-        font-weight: 300;
-        font-size: 1rem;
-        color: #dfe4ea; }
-    .about-page__first-section-image {
-      min-width: 50%; }
-      .about-page__first-section-image > img {
-        max-height: 30rem;
-        width: 100%;
-        position: absolute;
-        object-fit: cover; }
+    padding: 4rem 0 0 0; }
+    .about-page__first-section-content > * {
+      text-align: center; }
+      .about-page__first-section-content > *::selection {
+        background: #a4ee15;
+        color: #121212; }
+    .about-page__first-section-content--subheader {
+      color: #93d613;
+      font-size: 0.75rem; }
+      @media only screen and (min-width: 500px) {
+        .about-page__first-section-content--subheader {
+          font-size: 1rem; } }
+    .about-page__first-section-content--title {
+      color: #eef1f6;
+      font-size: 2rem;
+      font-weight: 700; }
+      @media only screen and (min-width: 500px) {
+        .about-page__first-section-content--title {
+          font-size: 2.5rem; } }
+      @media only screen and (min-width: 750px) {
+        .about-page__first-section-content--title {
+          font-size: 3.25rem; } }
+      @media only screen and (min-width: 992px) {
+        .about-page__first-section-content--title {
+          font-size: 4rem; } }
+    .about-page__first-section-content--p {
+      margin-top: 2rem;
+      font-weight: 300;
+      font-size: 1rem;
+      color: #dfe4ea; }
   .about-page__second-section {
-    padding: 4rem 0; }
+    padding: 5rem 0; }
     .about-page__second-section-grid {
-      height: 500px;
       display: grid;
       gap: 1rem;
       grid-template-columns: repeat(4, 1fr);
@@ -1107,11 +1152,18 @@ body {
         flex-flow: column nowrap;
         align-items: center;
         justify-content: center; }
+        .about-page__second-section-grid > * > h3::selection,
+        .about-page__second-section-grid > * > p::selection {
+          background: #a4ee15;
+          color: #121212; }
         .about-page__second-section-grid > * > h3 {
           color: #a4ee15;
           font-size: 4rem; }
         .about-page__second-section-grid > * > p {
           color: #dfe4ea; }
+      .about-page__second-section-grid span::selection {
+        background: #a4ee15;
+        color: #121212; }
       .about-page__second-section-grid--item1 {
         grid-area: img;
         overflow: hidden; }

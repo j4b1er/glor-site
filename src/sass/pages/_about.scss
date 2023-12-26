@@ -1,5 +1,5 @@
 .about-page {
-  background-color: $color-black-600;
+  background-color: $color-black-900;
   font-family: "Nunito Sans", sans-serif;
 
   overflow: hidden;
@@ -7,7 +7,7 @@
   &__container {
     max-width: $main-max-width;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 4rem 1rem;
   }
 
   &__first-section {
@@ -15,49 +15,59 @@
     gap: 2rem;
     justify-content: center;
 
-    width: 100%;
-    position: relative;
-
-    padding: 4rem 0;
+    padding: 4rem 0 0 0;
 
     &-content {
-      height: 30rem;
+      & > * {
+        text-align: center;
 
-      display: flex;
-      gap: 1rem;
-      flex-flow: column nowrap;
-      justify-content: center;
-
-      & > h2 {
-        font-size: 4rem;
-        color: $color-primary-100;
+        &::selection {
+          background: $color-green-accent-100;
+          color: $color-black-900;
+        }
       }
 
-      & > p {
+      &--subheader {
+        color: $color-green-accent-300;
+        font-size: 0.75rem;
+
+        @media only screen and (min-width: 500px) {
+          font-size: 1rem;
+        }
+      }
+
+      &--title {
+        color: $color-primary-100;
+        font-size: 2rem;
+        font-weight: 700;
+
+        @media only screen and (min-width: 500px) {
+          font-size: 2.5rem;
+        }
+
+        @media only screen and (min-width: 750px) {
+          font-size: 3.25rem;
+        }
+
+        @media only screen and (min-width: 992px) {
+          font-size: 4rem;
+        }
+      }
+
+      &--p {
+        margin-top: 2rem;
+
         font-weight: 300;
         font-size: 1rem;
         color: $color-primary-300;
       }
     }
-
-    &-image {
-      min-width: 50%;
-
-      & > img {
-        max-height: 30rem;
-        width: 100%;
-        position: absolute;
-        object-fit: cover;
-      }
-    }
   }
 
   &__second-section {
-    padding: 4rem 0;
+    padding: 5rem 0;
 
     &-grid {
-      height: 500px;
-
       display: grid;
       gap: 1rem;
       grid-template-columns: repeat(4, 1fr);
@@ -75,6 +85,14 @@
         align-items: center;
         justify-content: center;
 
+        & > h3,
+        & > p {
+          &::selection {
+            background: $color-green-accent-100;
+            color: $color-black-900;
+          }
+        }
+
         & > h3 {
           color: $color-green-accent-100;
           font-size: 4rem;
@@ -82,6 +100,13 @@
 
         & > p {
           color: $color-primary-300;
+        }
+      }
+
+      & span {
+        &::selection {
+          background: $color-green-accent-100;
+          color: $color-black-900;
         }
       }
 

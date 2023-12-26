@@ -1,0 +1,59 @@
+.lets-talk {
+  font-family: "Nunito Sans", sans-serif;
+  background-color: $color-black-600;
+
+  background: radial-gradient(
+    farthest-side at 50% -200%,
+    $color-black-100 20%,
+    $color-black-300 25%,
+    $color-black-900
+  );
+
+  &__container {
+    max-width: $main-max-width;
+    margin: 0 auto;
+    padding: 5rem 1rem;
+
+    display: flex;
+    gap: 1rem;
+    flex-flow: column nowrap;
+    align-items: left;
+
+    @media only screen and (min-width: 750px) {
+      display: flex;
+      gap: 1rem;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__content {
+    &--subheader {
+      color: $color-green-accent-300;
+      font-size: 0.75rem;
+
+      @media only screen and (min-width: 500px) {
+        font-size: 1rem;
+      }
+    }
+
+    &--title {
+      color: $color-primary-100;
+      font-size: 2rem;
+      font-weight: 700;
+
+      @media only screen and (min-width: 500px) {
+        font-size: 2.5rem;
+      }
+
+      @media only screen and (min-width: 750px) {
+        font-size: 3.25rem;
+      }
+
+      @media only screen and (min-width: 992px) {
+        font-size: 4rem;
+      }
+    }
+  }
+}
