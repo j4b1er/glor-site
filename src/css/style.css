@@ -667,18 +667,21 @@ body {
 
 .lets-talk {
   font-family: "Nunito Sans", sans-serif;
-  background-color: #1f1f1f;
-  background: radial-gradient(farthest-side at 50% -200%, #383838 20%, #252525 25%, #121212); }
+  background: radial-gradient(farthest-corner at 50% -200%, #eef1f6 20%, #dfe4ea 25%, #383838); }
+  @media only screen and (min-width: 750px) {
+    .lets-talk {
+      background: radial-gradient(farthest-side at 50% -200%, #eef1f6 20%, #dfe4ea 25%, #383838); } }
   .lets-talk__container {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 5rem 1rem;
+    padding: 2rem 1rem;
     display: flex;
     gap: 1rem;
     flex-flow: column nowrap;
     align-items: left; }
     @media only screen and (min-width: 750px) {
       .lets-talk__container {
+        padding: 5rem 1rem;
         display: flex;
         gap: 1rem;
         flex-flow: row nowrap;
@@ -1096,13 +1099,19 @@ body {
             color: #a4ee15; }
 
 .about-page {
-  background-color: #121212;
+  background-color: #383838;
   font-family: "Nunito Sans", sans-serif;
   overflow: hidden; }
   .about-page__container {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 4rem 1rem; }
+    padding: 0 1rem; }
+    @media only screen and (min-width: 500px) {
+      .about-page__container {
+        padding: 2rem 1rem; } }
+    @media only screen and (min-width: 750px) {
+      .about-page__container {
+        padding: 4rem 1rem; } }
   .about-page__first-section {
     display: flex;
     gap: 2rem;
@@ -1142,9 +1151,14 @@ body {
     .about-page__second-section-grid {
       display: grid;
       gap: 1rem;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: auto;
-      grid-template-areas: "img img partners satisfaction" "img img experience experience"; }
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 320px;
+      grid-template-areas: "img img" "partners satisfaction" "experience experience"; }
+      @media only screen and (min-width: 992px) {
+        .about-page__second-section-grid {
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: auto;
+          grid-template-areas: "img img partners satisfaction" "img img experience experience"; } }
       .about-page__second-section-grid > * {
         border-radius: 1rem;
         background-color: #252525;
@@ -1158,7 +1172,10 @@ body {
           color: #121212; }
         .about-page__second-section-grid > * > h3 {
           color: #a4ee15;
-          font-size: 4rem; }
+          font-size: 2.5rem; }
+          @media only screen and (min-width: 500px) {
+            .about-page__second-section-grid > * > h3 {
+              font-size: 4rem; } }
         .about-page__second-section-grid > * > p {
           color: #dfe4ea; }
       .about-page__second-section-grid span::selection {

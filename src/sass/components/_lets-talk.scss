@@ -1,18 +1,26 @@
 .lets-talk {
   font-family: "Nunito Sans", sans-serif;
-  background-color: $color-black-600;
 
   background: radial-gradient(
-    farthest-side at 50% -200%,
-    $color-black-100 20%,
-    $color-black-300 25%,
-    $color-black-900
+    farthest-corner at 50% -200%,
+    $color-primary-100 20%,
+    $color-primary-300 25%,
+    $color-black-100
   );
+
+  @media only screen and (min-width: 750px) {
+    background: radial-gradient(
+      farthest-side at 50% -200%,
+      $color-primary-100 20%,
+      $color-primary-300 25%,
+      $color-black-100
+    );
+  }
 
   &__container {
     max-width: $main-max-width;
     margin: 0 auto;
-    padding: 5rem 1rem;
+    padding: 2rem 1rem;
 
     display: flex;
     gap: 1rem;
@@ -20,6 +28,8 @@
     align-items: left;
 
     @media only screen and (min-width: 750px) {
+      padding: 5rem 1rem;
+
       display: flex;
       gap: 1rem;
       flex-flow: row nowrap;
