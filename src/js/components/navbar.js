@@ -8,11 +8,11 @@ const mobileDropdownMenu = document.querySelector(
 );
 let dropdownBtn;
 
-function addGlobalListener() {
+export function addGlobalListener() {
   document.addEventListener("click", handleOutsideClick);
 }
 
-function removeGlobalListener() {
+export function removeGlobalListener() {
   document.removeEventListener("click", handleOutsideClick);
 }
 
