@@ -666,11 +666,7 @@ body {
         content: "/\00a0"; }
 
 .lets-talk {
-  font-family: "Nunito Sans", sans-serif;
-  background: radial-gradient(farthest-corner at 50% -200%, #eef1f6 20%, #dfe4ea 25%, #383838); }
-  @media only screen and (min-width: 750px) {
-    .lets-talk {
-      background: radial-gradient(farthest-side at 50% -200%, #eef1f6 20%, #dfe4ea 25%, #383838); } }
+  font-family: "Nunito Sans", sans-serif; }
   .lets-talk__container {
     max-width: 1280px;
     margin: 0 auto;
@@ -706,6 +702,18 @@ body {
     @media only screen and (min-width: 992px) {
       .lets-talk__content--title {
         font-size: 4rem; } }
+
+.light {
+  background: radial-gradient(farthest-corner at 50% -200%, #eef1f6 20%, #dfe4ea 25%, #383838); }
+  @media only screen and (min-width: 750px) {
+    .light {
+      background: radial-gradient(farthest-side at 50% -200%, #eef1f6 20%, #dfe4ea 25%, #383838); } }
+
+.dark {
+  background: radial-gradient(farthest-corner at 50% -200%, #383838 20%, #252525 25%, #121212); }
+  @media only screen and (min-width: 750px) {
+    .dark {
+      background: radial-gradient(farthest-side at 50% -200%, #383838 20%, #252525 25%, #121212); } }
 
 .main-hero {
   background-color: #121212;
@@ -1145,6 +1153,7 @@ body {
       margin-top: 2rem;
       font-weight: 300;
       font-size: 1rem;
+      line-height: 1.5rem;
       color: #dfe4ea; }
   .about-page__second-section {
     padding: 5rem 0; }

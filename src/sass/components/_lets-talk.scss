@@ -1,22 +1,6 @@
 .lets-talk {
   font-family: "Nunito Sans", sans-serif;
 
-  background: radial-gradient(
-    farthest-corner at 50% -200%,
-    $color-primary-100 20%,
-    $color-primary-300 25%,
-    $color-black-100
-  );
-
-  @media only screen and (min-width: 750px) {
-    background: radial-gradient(
-      farthest-side at 50% -200%,
-      $color-primary-100 20%,
-      $color-primary-300 25%,
-      $color-black-100
-    );
-  }
-
   &__container {
     max-width: $main-max-width;
     margin: 0 auto;
@@ -65,5 +49,41 @@
         font-size: 4rem;
       }
     }
+  }
+}
+
+.light {
+  background: radial-gradient(
+    farthest-corner at 50% -200%,
+    $color-primary-100 20%,
+    $color-primary-300 25%,
+    $color-black-100
+  );
+
+  @media only screen and (min-width: 750px) {
+    background: radial-gradient(
+      farthest-side at 50% -200%,
+      $color-primary-100 20%,
+      $color-primary-300 25%,
+      $color-black-100
+    );
+  }
+}
+
+.dark {
+  background: radial-gradient(
+    farthest-corner at 50% -200%,
+    $color-black-100 20%,
+    $color-black-300 25%,
+    $color-black-900
+  );
+
+  @media only screen and (min-width: 750px) {
+    background: radial-gradient(
+      farthest-side at 50% -200%,
+      $color-black-100 20%,
+      $color-black-300 25%,
+      $color-black-900
+    );
   }
 }

@@ -27,7 +27,7 @@ export async function router() {
     },
     {
       path: "/projects",
-      page: "/src/pages/project.html",
+      page: "/src/pages/projects.html",
       title: "Look at our portfolio",
     },
     {
