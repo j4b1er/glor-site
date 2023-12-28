@@ -26,13 +26,18 @@ export async function router() {
       title: "What we offer",
     },
     {
+      path: "/services/isp-structural-cabling",
+      page: "/src/pages/services/isp-structural-cabling.html",
+      title: "IPS Structural Cabling Services",
+    },
+    {
       path: "/projects",
       page: "/src/pages/projects.html",
       title: "Look at our portfolio",
     },
     {
-      path: "/gogreen",
-      page: "/src/pages/gogreen.html",
+      path: "/go-green",
+      page: "/src/pages/go-green.html",
       title: "The enviroment matter to us",
     },
     {

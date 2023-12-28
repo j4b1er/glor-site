@@ -5,7 +5,7 @@ const app = express();
 
 const DESIRED_PORT = process.env.PORT ?? 1234;
 
-app.use("/src", express.static(path.resolve(__dirname, "src")));
+app.use("/src", express.static(path.join(__dirname, "src")));
 
 const processRequest = (req, res) => {
   res.sendFile(path.resolve(__dirname, "index.html"));
