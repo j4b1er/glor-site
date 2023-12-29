@@ -27,6 +27,11 @@
       color: $color-green-accent-300;
       font-size: 0.75rem;
 
+      &::selection {
+        background: $color-green-accent-100;
+        color: $color-black-900;
+      }
+
       @media only screen and (min-width: 500px) {
         font-size: 1rem;
       }
@@ -36,6 +41,11 @@
       color: $color-primary-100;
       font-size: 2rem;
       font-weight: 700;
+
+      &::selection {
+        background: $color-green-accent-100;
+        color: $color-black-900;
+      }
 
       @media only screen and (min-width: 500px) {
         font-size: 2.5rem;

@@ -686,6 +686,9 @@ body {
   .lets-talk__content--subheader {
     color: #93d613;
     font-size: 0.75rem; }
+    .lets-talk__content--subheader::selection {
+      background: #a4ee15;
+      color: #121212; }
     @media only screen and (min-width: 500px) {
       .lets-talk__content--subheader {
         font-size: 1rem; } }
@@ -693,6 +696,9 @@ body {
     color: #eef1f6;
     font-size: 2rem;
     font-weight: 700; }
+    .lets-talk__content--title::selection {
+      background: #a4ee15;
+      color: #121212; }
     @media only screen and (min-width: 500px) {
       .lets-talk__content--title {
         font-size: 2.5rem; } }
