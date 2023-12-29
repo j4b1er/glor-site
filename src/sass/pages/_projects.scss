@@ -1,5 +1,5 @@
 .projects-page {
-  background-color: $color-black-900;
+  background-color: $color-black-100;
   font-family: "Nunito Sans", sans-serif;
 
   overflow: hidden;
@@ -67,56 +67,22 @@
   &__second-section {
     padding: 5rem 0;
 
-    &-grid {
-      display: grid;
+    &-container {
+      display: flex;
       gap: 1rem;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: dense;
-      //   align-items: flex-start;
+      width: 100%;
 
-      & > * {
-        border-radius: 1rem;
-        background-color: red;
-      }
+      &-column {
+        min-width: 25%;
+        display: flex;
+        gap: 1rem;
+        flex-flow: column nowrap;
 
-      &--project-1 {
-        height: 200px;
-      }
-
-      &--project-2 {
-        height: 400px;
-      }
-
-      &--project-3 {
-        height: 200px;
-      }
-
-      &--project-4 {
-        height: 400px;
+        & > img {
+          width: 100%;
+          border-radius: 1rem;
+        }
       }
     }
-
-    // &-grid {
-    //   display: flex;
-    //   gap: 1rem;
-    //   width: 100%;
-
-    //   & > * {
-    //     border-radius: 1rem;
-    //     background-color: red;
-    //   }
-
-    //   &--project-1 {
-    //     width: 33.34%;
-    //   }
-
-    //   &--project-2 {
-    //     width: 33.34%;
-    //   }
-
-    //   &--project-3 {
-    //     width: 33.34%;
-    //   }
-    // }
   }
 }

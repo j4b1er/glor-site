@@ -1214,7 +1214,7 @@ body {
           font-size: 2.5rem; }
 
 .projects-page {
-  background-color: #121212;
+  background-color: #383838;
   font-family: "Nunito Sans", sans-serif;
   overflow: hidden; }
   .projects-page__container {
@@ -1258,19 +1258,15 @@ body {
           font-size: 4rem; } }
   .projects-page__second-section {
     padding: 5rem 0; }
-    .projects-page__second-section-grid {
-      display: grid;
+    .projects-page__second-section-container {
+      display: flex;
       gap: 1rem;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: dense; }
-      .projects-page__second-section-grid > * {
-        border-radius: 1rem;
-        background-color: red; }
-      .projects-page__second-section-grid--project-1 {
-        height: 200px; }
-      .projects-page__second-section-grid--project-2 {
-        height: 400px; }
-      .projects-page__second-section-grid--project-3 {
-        height: 200px; }
-      .projects-page__second-section-grid--project-4 {
-        height: 400px; }
+      width: 100%; }
+      .projects-page__second-section-container-column {
+        min-width: 25%;
+        display: flex;
+        gap: 1rem;
+        flex-flow: column nowrap; }
+        .projects-page__second-section-container-column > img {
+          width: 100%;
+          border-radius: 1rem; }
