@@ -1,0 +1,122 @@
+.projects-page {
+  background-color: $color-black-900;
+  font-family: "Nunito Sans", sans-serif;
+
+  overflow: hidden;
+
+  &__container {
+    max-width: $main-max-width;
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    @media only screen and (min-width: 500px) {
+      padding: 2rem 1rem;
+    }
+
+    @media only screen and (min-width: 750px) {
+      padding: 4rem 1rem;
+    }
+  }
+
+  &__first-section {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+
+    padding: 4rem 0 0 0;
+
+    &-content {
+      & > * {
+        text-align: center;
+
+        &::selection {
+          background: $color-green-accent-100;
+          color: $color-black-900;
+        }
+      }
+
+      &--subheader {
+        color: $color-green-accent-300;
+        font-size: 0.75rem;
+
+        @media only screen and (min-width: 500px) {
+          font-size: 1rem;
+        }
+      }
+
+      &--title {
+        color: $color-primary-100;
+        font-size: 2rem;
+        font-weight: 700;
+
+        @media only screen and (min-width: 500px) {
+          font-size: 2.5rem;
+        }
+
+        @media only screen and (min-width: 750px) {
+          font-size: 3.25rem;
+        }
+
+        @media only screen and (min-width: 992px) {
+          font-size: 4rem;
+        }
+      }
+    }
+  }
+
+  &__second-section {
+    padding: 5rem 0;
+
+    &-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: dense;
+      //   align-items: flex-start;
+
+      & > * {
+        border-radius: 1rem;
+        background-color: red;
+      }
+
+      &--project-1 {
+        height: 200px;
+      }
+
+      &--project-2 {
+        height: 400px;
+      }
+
+      &--project-3 {
+        height: 200px;
+      }
+
+      &--project-4 {
+        height: 400px;
+      }
+    }
+
+    // &-grid {
+    //   display: flex;
+    //   gap: 1rem;
+    //   width: 100%;
+
+    //   & > * {
+    //     border-radius: 1rem;
+    //     background-color: red;
+    //   }
+
+    //   &--project-1 {
+    //     width: 33.34%;
+    //   }
+
+    //   &--project-2 {
+    //     width: 33.34%;
+    //   }
+
+    //   &--project-3 {
+    //     width: 33.34%;
+    //   }
+    // }
+  }
+}

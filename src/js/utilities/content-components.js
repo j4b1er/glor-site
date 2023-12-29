@@ -11,6 +11,7 @@ export function ContentComponents() {
   //Initiate Partners slider
   Slider();
 
+  //Functions to handle the navbar actions on SPA
   NavbarActive();
   closeDropdown();
 }
