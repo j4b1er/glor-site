@@ -43,27 +43,39 @@ export function Masonry() {
   );
 
   if (masonryContainer) {
-    createMasonry(2, picsData);
+    createMasonry(3, picsData);
   }
 
   function createMasonry(colNum, data) {
-    const remainingPics = data.length % colNum;
-    const picPerCol =
-      remainingPics !== 0
-        ? (data.length - remainingPics) / colNum
-        : data.length / colNum;
+    let remainingPics = data.length % colNum;
+    const picPerCol = Math.floor(data.length / colNum);
+
+    let initJ = 0;
 
     for (let i = 0; i < colNum; i++) {
       let colDiv = document.createElement("div");
       colDiv.classList.add("projects-page__second-section-container-column");
 
-      let maxColNum = data.length - (colNum - i);
+      let colData2 = data.slice(
+        initJ,
+        remainingPics > 0 ? initJ + picPerCol + 1 : initJ + picPerCol
+      );
+      remainingPics--;
 
-      for (let j = i; j <= maxColNum; j += colNum) {
+      colData2.forEach((image, index) => {
         let img = document.createElement("img");
-        img.src = data[j].url;
+        index === i
+          ? img.classList.add(
+              "projects-page__second-section-container--item-big"
+            )
+          : img.classList.add(
+              "projects-page__second-section-container--item-small"
+            );
+        img.src = image.url;
+        img.alt = image.alt;
         colDiv.appendChild(img);
-      }
+        initJ++;
+      });
 
       masonryContainer.appendChild(colDiv);
     }

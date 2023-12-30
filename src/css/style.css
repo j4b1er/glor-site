@@ -1269,10 +1269,20 @@ body {
       gap: 1rem;
       width: 100%; }
       .projects-page__second-section-container-column {
-        min-width: 25%;
+        width: 100%;
         display: flex;
         gap: 1rem;
         flex-flow: column nowrap; }
+        @media only screen and (min-width: 500px) {
+          .projects-page__second-section-container-column {
+            width: 50%; } }
         .projects-page__second-section-container-column > img {
           width: 100%;
           border-radius: 1rem; }
+      .projects-page__second-section-container--item-small, .projects-page__second-section-container--item-big {
+        object-fit: cover;
+        object-position: center; }
+      .projects-page__second-section-container--item-small {
+        height: 17rem; }
+      .projects-page__second-section-container--item-big {
+        height: 34rem; }

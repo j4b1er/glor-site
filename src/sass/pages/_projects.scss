@@ -73,15 +73,33 @@
       width: 100%;
 
       &-column {
-        min-width: 25%;
+        width: 100%;
         display: flex;
         gap: 1rem;
         flex-flow: column nowrap;
+
+        @media only screen and (min-width: 500px) {
+          width: max(50%, 25%);
+        }
 
         & > img {
           width: 100%;
           border-radius: 1rem;
         }
+      }
+
+      &--item-small,
+      &--item-big {
+        object-fit: cover;
+        object-position: center;
+      }
+
+      &--item-small {
+        height: 17rem;
+      }
+
+      &--item-big {
+        height: 34rem;
       }
     }
   }
