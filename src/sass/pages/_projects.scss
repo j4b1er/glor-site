@@ -81,17 +81,30 @@
         @media only screen and (min-width: 500px) {
           width: max(50%, 25%);
         }
-
-        & > img {
-          width: 100%;
-          border-radius: 1rem;
-        }
       }
 
       &--item-small,
       &--item-big {
-        object-fit: cover;
-        object-position: center;
+        cursor: pointer;
+
+        border-radius: 1rem;
+        overflow: hidden;
+
+        & > img {
+          width: 100%;
+          height: 100%;
+
+          object-fit: cover;
+          object-position: center;
+
+          opacity: 0.6;
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            opacity: 1;
+            transform: scale(1.1);
+          }
+        }
       }
 
       &--item-small {

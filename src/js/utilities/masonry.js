@@ -67,17 +67,19 @@ export function Masonry() {
       remainingPics--;
 
       colData.forEach((image, index) => {
+        let imgDiv = document.createElement("div");
         let img = document.createElement("img");
         sizeSwitcher
-          ? img.classList.add(
+          ? imgDiv.classList.add(
               "projects-page__second-section-container--item-big"
             )
-          : img.classList.add(
+          : imgDiv.classList.add(
               "projects-page__second-section-container--item-small"
             );
         img.src = image.url;
         img.alt = image.alt;
-        colDiv.appendChild(img);
+        imgDiv.appendChild(img);
+        colDiv.appendChild(imgDiv);
 
         sizeSwitcher = !sizeSwitcher;
         initJ++;
