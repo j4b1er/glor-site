@@ -43,12 +43,17 @@ export function Masonry() {
   );
 
   if (masonryContainer) {
-    createMasonry(3, picsData);
+    const winSize = window.innerWidth;
+    if (winSize >= 992) createMasonry(3, picsData);
+    else if (winSize >= 500) createMasonry(2, picsData);
+    else createMasonry(1, picsData);
   }
 
   function createMasonry(colNum, data) {
     let remainingPics = data.length % colNum;
     const picPerCol = Math.floor(data.length / colNum);
+
+    console.log(1 % 1);
 
     let initJ = 0;
 
