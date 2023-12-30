@@ -53,23 +53,22 @@ export function Masonry() {
     let remainingPics = data.length % colNum;
     const picPerCol = Math.floor(data.length / colNum);
 
-    console.log(1 % 1);
-
     let initJ = 0;
+    let sizeSwitcher = true;
 
     for (let i = 0; i < colNum; i++) {
       let colDiv = document.createElement("div");
       colDiv.classList.add("projects-page__second-section-container-column");
 
-      let colData2 = data.slice(
+      let colData = data.slice(
         initJ,
         remainingPics > 0 ? initJ + picPerCol + 1 : initJ + picPerCol
       );
       remainingPics--;
 
-      colData2.forEach((image, index) => {
+      colData.forEach((image, index) => {
         let img = document.createElement("img");
-        index === i
+        sizeSwitcher
           ? img.classList.add(
               "projects-page__second-section-container--item-big"
             )
@@ -79,6 +78,8 @@ export function Masonry() {
         img.src = image.url;
         img.alt = image.alt;
         colDiv.appendChild(img);
+
+        sizeSwitcher = !sizeSwitcher;
         initJ++;
       });
 
