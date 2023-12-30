@@ -1,19 +1,19 @@
 const picsData = [
   {
-    url: "src/media/projects/cables.jpg",
-    alt: "Cables installed on top of Building",
+    url: "./src/media/projects/sec-camera-2.jpg",
+    alt: "Security camera mounted on white wall",
   },
   {
-    url: "src/media/projects/audio-visual-2.jpg",
+    url: "./src/media/projects/audio-visual-2.jpg",
     alt: "Man recording with camera",
   },
   {
-    url: "src/media/projects/sec-camera.jpg",
+    url: "./src/media/projects/sec-camera.jpg",
     alt: "Outside Security camera mounted on wall",
   },
   {
-    url: "./src/media/projects/data-center.jpg",
-    alt: "Man inside Data center with camera",
+    url: "./src/media/projects/cables.jpg",
+    alt: "Cables installed on top of Building",
   },
   {
     url: "./src/media/projects/cables-2.jpg",
@@ -24,16 +24,16 @@ const picsData = [
     alt: "Cables connected to a big switch",
   },
   {
+    url: "./src/media/projects/computer.jpg",
+    alt: "Man studying with 2 computers",
+  },
+  {
     url: "./src/media/projects/data-center-2.jpg",
     alt: "Data Server with cables inside a big rack",
   },
   {
-    url: "./src/media/projects/sec-camera-2.jpg",
-    alt: "Security camera mounted on white wall",
-  },
-  {
-    url: "./src/media/projects/computer.jpg",
-    alt: "Man studying with 2 computers",
+    url: "./src/media/projects/data-center.jpg",
+    alt: "Man inside Data center with camera",
   },
 ];
 
@@ -43,24 +43,29 @@ export function Masonry() {
   );
 
   if (masonryContainer) {
-    createMasonry(3, picsData);
+    createMasonry(2, picsData);
   }
 
   function createMasonry(colNum, data) {
     const remainingPics = data.length % colNum;
-    const picPerCol = data.length / colNum;
-    console.log(remainingPics);
+    const picPerCol =
+      remainingPics !== 0
+        ? (data.length - remainingPics) / colNum
+        : data.length / colNum;
 
     for (let i = 0; i < colNum; i++) {
       let colDiv = document.createElement("div");
       colDiv.classList.add("projects-page__second-section-container-column");
 
+      let maxColNum = data.length - (colNum - i);
+
+      for (let j = i; j <= maxColNum; j += colNum) {
+        let img = document.createElement("img");
+        img.src = data[j].url;
+        colDiv.appendChild(img);
+      }
+
       masonryContainer.appendChild(colDiv);
     }
-    // const img = new Image();
-    // img.url = data[0].url;
-    // img.onload = () => {
-    //   console.log(img.url);
-    // };
   }
 }
