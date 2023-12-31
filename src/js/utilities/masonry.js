@@ -42,27 +42,37 @@ export function Masonry() {
     ".projects-page__second-section-container"
   );
 
+  //if Masonry container exists in the page
   if (masonryContainer) {
     const winSize = window.innerWidth;
     if (winSize >= 992) createMasonry(3, picsData);
     else if (winSize >= 500) createMasonry(2, picsData);
     else createMasonry(1, picsData);
+
+    document.addEventListener("click", (e) => {
+      let imgElm = e.target;
+      if (imgElm.hasAttribute("data-masonry")) console.log(e.target);
+    });
   }
 
   function createMasonry(colNum, data) {
+    //get the remaining pictures
     let remainingPics = data.length % colNum;
+    //calculate the number of pictures per column
     const picPerCol = Math.floor(data.length / colNum);
 
-    let initJ = 0;
-    let sizeSwitcher = true;
+    //counter to be aware of the starting point for each column in relation of the data array
+    let rowIndex = 0;
+    //boolean to swap between big and small classes no matter the current column
+    let sizeSwitcher = false;
 
     for (let i = 0; i < colNum; i++) {
       let colDiv = document.createElement("div");
       colDiv.classList.add("projects-page__second-section-container-column");
 
       let colData = data.slice(
-        initJ,
-        remainingPics > 0 ? initJ + picPerCol + 1 : initJ + picPerCol
+        rowIndex,
+        remainingPics > 0 ? rowIndex + picPerCol + 1 : rowIndex + picPerCol
       );
       remainingPics--;
 
@@ -78,11 +88,12 @@ export function Masonry() {
             );
         img.src = image.url;
         img.alt = image.alt;
+        img.setAttribute("data-masonry", "");
         imgDiv.appendChild(img);
         colDiv.appendChild(imgDiv);
 
         sizeSwitcher = !sizeSwitcher;
-        initJ++;
+        rowIndex++;
       });
 
       masonryContainer.appendChild(colDiv);
