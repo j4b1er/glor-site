@@ -15,18 +15,20 @@ export function Overlay(element = null) {
     return;
   }
 
+  const controller = new AbortController();
+
   const overlayContainer = document.querySelector(".full-overlay__container");
   const closeBtn = document.querySelector(".full-overlay__button");
-
-  //add the overlay since this function is called when something is clicked
-  overlay.classList.add("show-overlay");
-  overlay.setAttribute("data-visible", true);
-  document.body.classList.add("no-scroll");
 
   //create the img element and append it to the overlay container
   const img = document.createElement("img");
   img.src = element.src;
   overlayContainer.appendChild(img);
+
+  //add the overlay since this function is called when something is clicked
+  overlay.classList.add("show-overlay");
+  overlay.setAttribute("data-visible", true);
+  document.body.classList.add("no-scroll");
 
   //listener to the close button
   closeBtn.addEventListener(
@@ -35,7 +37,21 @@ export function Overlay(element = null) {
       overlay.setAttribute("data-visible", false);
       document.body.classList.remove("no-scroll");
       overlayContainer.removeChild(img);
+      controller.abort();
     },
-    { once: true }
+    { signal: controller.signal }
+  );
+
+  document.addEventListener(
+    "keydown",
+    (e) => {
+      if (e.key === "Escape") {
+        overlay.setAttribute("data-visible", false);
+        document.body.classList.remove("no-scroll");
+        overlayContainer.removeChild(img);
+        controller.abort();
+      }
+    },
+    { signal: controller.signal }
   );
 }
