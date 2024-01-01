@@ -34,14 +34,24 @@ export function closeDropdown() {
 }
 
 export function closeMobileNavbar() {
+  //hamburger button in mobile devices
   const hamburgerBtn = document.querySelector(
     ".main-navigation-mobile__top-menu-hamburger"
   );
   const mobileMenuList = document.querySelector(
     "#main-navigation-mobile__drop-menu"
   );
+  //dropdown menu inside mobile menu in small devices
+  const dropdownBtnMobile = document.querySelector("#mobile-dropdown-btn");
+  const mobileDropdownMenu = document.querySelector(
+    ".main-navigation-mobile__drop-menu--submenu"
+  );
+
   const visibility = mobileMenuList.getAttribute("data-visible");
 
+  const dropDownvisibility = mobileDropdownMenu.getAttribute("data-visible");
+
+  //hide mobile menu when navigating to other page in SPA
   if (visibility === "true") {
     mobileMenuList.classList.replace("fade-in", "fade-out");
     hamburgerBtn.setAttribute("aria-expanded", false);
@@ -50,5 +60,12 @@ export function closeMobileNavbar() {
     document.body.classList.remove("no-scroll");
 
     HideAfterAnimationEnds(mobileMenuList);
+  }
+
+  //collapse dropdown menu from mobile menu
+  if (dropDownvisibility === "true") {
+    mobileDropdownMenu.classList.replace("fade-in", "fade-out");
+    dropdownBtnMobile.setAttribute("aria-expanded", false);
+    HideAfterAnimationEnds(mobileDropdownMenu);
   }
 }
