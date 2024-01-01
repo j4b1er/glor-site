@@ -1,21 +1,22 @@
-export function Overlay(element) {
+export function Overlay(element = null) {
   //selects the overlay element
   const overlay = document.querySelector("#full-overlay");
-  //if overlay is not present in current page return
-  if (!overlay) return;
 
-  let overlayCalledFrom = window.location.pathname;
-  console.log(overlayCalledFrom);
+  //if overlay is not present in current page return
+  if (!overlay) {
+    //check so when switched to other page it removes the no-scroll class
+    if (document.body.classList.contains("no-scroll")) {
+      document.body.classList.remove("no-scroll");
+    }
+    return;
+  }
+  //if no element was opened to be shown in the Overlay yet
+  if (!element) {
+    return;
+  }
+
   const overlayContainer = document.querySelector(".full-overlay__container");
   const closeBtn = document.querySelector(".full-overlay__button");
-
-  function addListener(callback) {
-    document.addEventListener("click", callback);
-  }
-
-  function removeListener(callback) {
-    document.removeEventListener("click", callback);
-  }
 
   //add the overlay since this function is called when something is clicked
   overlay.classList.add("show-overlay");
@@ -27,21 +28,14 @@ export function Overlay(element) {
   img.src = element.src;
   overlayContainer.appendChild(img);
 
-  //add global listener
-  addListener(callback);
-
-  //callback function to check if overlay close btn is pressed or if we navigate outside the page thru the
-  function callback(e) {
-    if (closeBtn.contains(e.target) || !overlay.contains(e.target)) {
-      overlayContainer.removeChild(img);
+  //listener to the close button
+  closeBtn.addEventListener(
+    "click",
+    () => {
       overlay.setAttribute("data-visible", false);
       document.body.classList.remove("no-scroll");
-      removeListener(callback);
-    }
-  }
-
-  //this should be a function we can export to check in the content-component and compare it with the current path
-  function checkPath(path) {
-    if (overlayCalledFrom !== path) callback();
-  }
+      overlayContainer.removeChild(img);
+    },
+    { once: true }
+  );
 }

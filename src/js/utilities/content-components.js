@@ -3,6 +3,7 @@ import { Slider } from "../components/infinite-slider.js";
 import { InterObserver } from "../utilities/intersection-observer.js";
 import { NavbarActive, closeDropdown } from "./handle-navbar.js";
 import { Masonry } from "./masonry.js";
+import { Overlay } from "../components/full-overlay.js";
 
 export function ContentComponents() {
   //Call Intersection Observer for the animations
@@ -18,4 +19,7 @@ export function ContentComponents() {
 
   //Masonry Grid
   Masonry();
+
+  //Overlay check
+  Overlay();
 }
