@@ -14,3 +14,7 @@ body {
   overflow-x: hidden;
   background: $color-black-900;
 }
+
+html {
+  scrollbar-gutter: stable;
+}

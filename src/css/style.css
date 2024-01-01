@@ -233,6 +233,9 @@ body {
   overflow-x: hidden;
   background: #121212; }
 
+html {
+  scrollbar-gutter: stable; }
+
 .main-navigation {
   position: fixed;
   width: 100%;
@@ -722,7 +725,7 @@ body {
       background: radial-gradient(farthest-side at 50% -200%, #383838 20%, #252525 25%, #141414); } }
 
 .full-overlay {
-  position: absolute;
+  position: fixed;
   inset: 0;
   background-color: rgba(18, 18, 18, 0.5);
   backdrop-filter: blur(1.5rem);

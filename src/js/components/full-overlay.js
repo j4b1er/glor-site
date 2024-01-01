@@ -6,6 +6,7 @@ export function Overlay(element) {
 
   overlay.classList.add("show-overlay");
   overlay.setAttribute("data-visible", true);
+  document.body.classList.add("no-scroll");
 
   const img = document.createElement("img");
   img.src = element.src;
@@ -14,8 +15,8 @@ export function Overlay(element) {
   const closeBtn = document.querySelector(".full-overlay__button");
 
   closeBtn.addEventListener("click", () => {
-    // const visibility = overlay.getAttribute("data-visible");
     overlayContainer.removeChild(img);
     overlay.setAttribute("data-visible", false);
+    document.body.classList.remove("no-scroll");
   });
 }
