@@ -1,3 +1,5 @@
+import { Overlay } from "../components/full-overlay.js";
+
 const picsData = [
   {
     url: "./src/media/projects/sec-camera-2.jpg",
@@ -51,7 +53,9 @@ export function Masonry() {
 
     document.addEventListener("click", (e) => {
       let imgElm = e.target;
-      if (imgElm.hasAttribute("data-masonry")) console.log(e.target);
+      if (imgElm.hasAttribute("data-masonry")) {
+        Overlay(imgElm);
+      }
     });
   }
 

@@ -721,6 +721,58 @@ body {
     .dark {
       background: radial-gradient(farthest-side at 50% -200%, #383838 20%, #252525 25%, #141414); } }
 
+.full-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(18, 18, 18, 0.5);
+  backdrop-filter: blur(1.5rem);
+  z-index: 100;
+  padding-top: 3.5rem; }
+  .full-overlay[data-visible="false"] {
+    display: none; }
+  @media only screen and (min-width: 790px) {
+    .full-overlay {
+      padding-top: 7rem; } }
+  .full-overlay__container {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%; }
+    .full-overlay__container > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; }
+  .full-overlay__button {
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    height: 1.75rem;
+    width: 1.75rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #a4ee15;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s; }
+    @media only screen and (min-width: 790px) {
+      .full-overlay__button {
+        top: 1rem;
+        right: 1rem;
+        height: 2.5rem;
+        width: 2.5rem; } }
+    .full-overlay__button:hover {
+      background-color: #eef1f6; }
+    .full-overlay__button > svg {
+      width: 0.75rem;
+      fill: #121212; }
+      @media only screen and (min-width: 790px) {
+        .full-overlay__button > svg {
+          width: 1rem; } }
+
 .main-hero {
   background-color: #121212;
   font-family: "Nunito Sans", sans-serif; }
@@ -1294,56 +1346,3 @@ body {
         height: 17rem; }
       .projects-page__second-section-container--item-big {
         height: 34rem; }
-
-.full-overlay {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(18, 18, 18, 0.5);
-  backdrop-filter: blur(1.5rem);
-  z-index: 100;
-  padding-top: 3.5rem; }
-  @media only screen and (min-width: 790px) {
-    .full-overlay {
-      padding-top: 7rem; } }
-  .full-overlay__container {
-    position: relative;
-    max-width: 1280px;
-    margin: 0 auto;
-    height: 100%;
-    width: 100%; }
-    .full-overlay__container > img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain; }
-  .full-overlay__button {
-    cursor: pointer;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    height: 1.75rem;
-    width: 1.75rem;
-    border: none;
-    border-radius: 0.5rem;
-    background-color: #a4ee15;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0.6;
-    transition: all 0.2s; }
-    @media only screen and (min-width: 790px) {
-      .full-overlay__button {
-        top: 1rem;
-        right: 1rem;
-        height: 2.5rem;
-        width: 2.5rem; } }
-    .full-overlay__button:hover {
-      background-color: #a4ee15;
-      opacity: 1; }
-      .full-overlay__button:hover > svg {
-        fill: #121212; }
-    .full-overlay__button > svg {
-      width: 0.75rem;
-      fill: #121212; }
-      @media only screen and (min-width: 790px) {
-        .full-overlay__button > svg {
-          width: 1rem; } }
