@@ -32,3 +32,23 @@ export function closeDropdown() {
     removeGlobalListener();
   }
 }
+
+export function closeMobileNavbar() {
+  const hamburgerBtn = document.querySelector(
+    ".main-navigation-mobile__top-menu-hamburger"
+  );
+  const mobileMenuList = document.querySelector(
+    "#main-navigation-mobile__drop-menu"
+  );
+  const visibility = mobileMenuList.getAttribute("data-visible");
+
+  if (visibility === "true") {
+    mobileMenuList.classList.replace("fade-in", "fade-out");
+    hamburgerBtn.setAttribute("aria-expanded", false);
+
+    //when mobile menu is closed add scroll from body
+    document.body.classList.remove("no-scroll");
+
+    HideAfterAnimationEnds(mobileMenuList);
+  }
+}
