@@ -30,7 +30,6 @@
 
     & img {
       position: absolute;
-      top: 0;
       left: 0;
 
       height: 100%;
@@ -40,16 +39,20 @@
     }
 
     &--back {
+      top: var(--back-top-pos, 0);
+
       opacity: 0.6;
       filter: blur(1px);
     }
 
     &--front {
+      top: 0;
       z-index: 2;
     }
 
     &--title {
       position: relative;
+      top: var(--title-top-pos, 0);
       font-size: 8rem;
       color: $color-primary-100;
       z-index: 1;

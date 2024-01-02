@@ -799,18 +799,20 @@ html {
       z-index: 10; }
     .parallax-effect__container img {
       position: absolute;
-      top: 0;
       left: 0;
       height: 100%;
       width: 100%;
       object-fit: cover; }
     .parallax-effect__container--back {
+      top: var(--back-top-pos, 0);
       opacity: 0.6;
       filter: blur(1px); }
     .parallax-effect__container--front {
+      top: 0;
       z-index: 2; }
     .parallax-effect__container--title {
       position: relative;
+      top: var(--title-top-pos, 0);
       font-size: 8rem;
       color: #eef1f6;
       z-index: 1; }
