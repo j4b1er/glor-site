@@ -776,6 +776,47 @@ html {
         .full-overlay__button > svg {
           width: 1rem; } }
 
+.parallax-effect {
+  font-family: "Nunito Sans", sans-serif;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden; }
+  .parallax-effect__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%; }
+    .parallax-effect__container::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 10rem;
+      background: linear-gradient(to top, #383838, transparent);
+      z-index: 10; }
+    .parallax-effect__container img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover; }
+    .parallax-effect__container--back {
+      opacity: 0.6;
+      filter: blur(1px); }
+    .parallax-effect__container--front {
+      z-index: 2; }
+    .parallax-effect__container--title {
+      position: relative;
+      font-size: 8rem;
+      color: #eef1f6;
+      z-index: 1; }
+      .parallax-effect__container--title span {
+        color: #a4ee15; }
+
 .main-hero {
   background-color: #121212;
   font-family: "Nunito Sans", sans-serif; }
@@ -1273,6 +1314,50 @@ html {
         padding: 1rem; }
         .about-page__second-section-grid--item4 span {
           font-size: 2.5rem; }
+
+.gogreen-page {
+  background-color: #383838;
+  font-family: "Nunito Sans", sans-serif;
+  overflow: hidden; }
+  .gogreen-page__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem; }
+  .gogreen-page__first-section {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    padding: 7rem 0 0 0; }
+    .gogreen-page__first-section-content > * {
+      text-align: center; }
+      .gogreen-page__first-section-content > *::selection {
+        background: #a4ee15;
+        color: #121212; }
+    .gogreen-page__first-section-content--subheader {
+      color: #93d613;
+      font-size: 0.75rem; }
+      @media only screen and (min-width: 500px) {
+        .gogreen-page__first-section-content--subheader {
+          font-size: 1rem; } }
+    .gogreen-page__first-section-content--title {
+      color: #eef1f6;
+      font-size: 2rem;
+      font-weight: 700; }
+      @media only screen and (min-width: 500px) {
+        .gogreen-page__first-section-content--title {
+          font-size: 2.5rem; } }
+      @media only screen and (min-width: 750px) {
+        .gogreen-page__first-section-content--title {
+          font-size: 3.25rem; } }
+      @media only screen and (min-width: 992px) {
+        .gogreen-page__first-section-content--title {
+          font-size: 4rem; } }
+    .gogreen-page__first-section-content--p {
+      margin-top: 2rem;
+      font-weight: 300;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      color: #dfe4ea; }
 
 .projects-page {
   background-color: #383838;

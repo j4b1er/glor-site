@@ -8,6 +8,7 @@ import {
 } from "./handle-navbar.js";
 import { Masonry } from "./masonry.js";
 import { Overlay } from "../components/full-overlay.js";
+import { Parallax } from "../components/parallax-effect.js";
 
 export function ContentComponents() {
   //Call Intersection Observer for the animations
@@ -27,4 +28,6 @@ export function ContentComponents() {
 
   //Overlay check
   Overlay();
+
+  Parallax();
 }

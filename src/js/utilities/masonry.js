@@ -92,6 +92,7 @@ export function Masonry() {
             );
         img.src = image.url;
         img.alt = image.alt;
+        img.setAttribute("loading", "lazy");
         img.setAttribute("data-masonry", "");
         imgDiv.appendChild(img);
         colDiv.appendChild(imgDiv);
