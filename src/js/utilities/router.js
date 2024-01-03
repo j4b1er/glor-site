@@ -47,7 +47,10 @@ export async function router() {
     },
   ];
 
-  let routeFound = routes.find((route) => route.path === location.pathname);
+  let routeFound = routes.find(
+    (route) =>
+      route.path === location.pathname || `${route.path}/` === location.pathname
+  );
   if (!routeFound) routeFound = routes[5];
   let pageFetch = await fetch(routeFound.page);
   let data = await pageFetch.text();
