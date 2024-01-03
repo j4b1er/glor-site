@@ -813,9 +813,18 @@ html {
     .parallax-effect__container--title {
       position: relative;
       top: var(--title-top-pos, 0);
-      font-size: 8rem;
+      font-size: 3.5rem;
       color: #eef1f6;
       z-index: 1; }
+      @media only screen and (min-width: 500px) {
+        .parallax-effect__container--title {
+          font-size: 5.5rem; } }
+      @media only screen and (min-width: 790px) {
+        .parallax-effect__container--title {
+          font-size: 7rem; } }
+      @media only screen and (min-width: 992px) {
+        .parallax-effect__container--title {
+          font-size: 8rem; } }
       .parallax-effect__container--title span {
         color: #a4ee15; }
 
@@ -1319,8 +1328,7 @@ html {
 
 .gogreen-page {
   background-color: #383838;
-  font-family: "Nunito Sans", sans-serif;
-  overflow: hidden; }
+  font-family: "Nunito Sans", sans-serif; }
   .gogreen-page__container {
     max-width: 1280px;
     margin: 0 auto;
@@ -1360,6 +1368,60 @@ html {
       font-size: 1rem;
       line-height: 1.5rem;
       color: #dfe4ea; }
+  .gogreen-page__second-section {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+    align-items: start;
+    padding: 2rem 0; }
+    @media only screen and (min-width: 500px) {
+      .gogreen-page__second-section {
+        flex-flow: row nowrap;
+        padding: 4rem 0; } }
+    .gogreen-page__second-section-title {
+      background-color: #252525;
+      border-radius: 1rem;
+      padding: 2rem;
+      width: 100%;
+      font-size: 1.5rem;
+      color: #a4ee15; }
+      @media only screen and (min-width: 500px) {
+        .gogreen-page__second-section-title {
+          position: sticky;
+          position: -webkit-sticky;
+          top: 4.5rem;
+          min-width: 10rem; } }
+      @media only screen and (min-width: 790px) {
+        .gogreen-page__second-section-title {
+          top: 8rem;
+          padding: 5rem 2rem;
+          min-width: 18rem;
+          font-size: 2rem; } }
+      @media only screen and (min-width: 992px) {
+        .gogreen-page__second-section-title {
+          min-width: 24rem;
+          font-size: 2.5rem; } }
+    .gogreen-page__second-section-content {
+      padding: 2rem 1rem;
+      background-color: #252525;
+      border-radius: 1rem;
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 1rem; }
+      @media only screen and (min-width: 500px) {
+        .gogreen-page__second-section-content {
+          gap: 2rem; } }
+      @media only screen and (min-width: 790px) {
+        .gogreen-page__second-section-content {
+          padding: 5rem 2rem;
+          gap: 4rem; } }
+      .gogreen-page__second-section-content--item h4 {
+        font-size: 1.5rem;
+        color: #eef1f6;
+        margin-bottom: 1rem; }
+      .gogreen-page__second-section-content--item p {
+        color: #dfe4ea;
+        opacity: 0.8; }
 
 .projects-page {
   background-color: #383838;

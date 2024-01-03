@@ -14,6 +14,6 @@ export function Parallax() {
     let yValue = window.scrollY;
 
     parallaxBack.style.setProperty("--back-top-pos", yValue * 0.25 + "px");
-    parallaxTitle.style.setProperty("--title-top-pos", yValue * 1 + "px");
+    parallaxTitle.style.setProperty("--title-top-pos", yValue * 0.65 + "px");
   });
 }
