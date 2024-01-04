@@ -29,5 +29,6 @@ export function ContentComponents() {
   //Overlay check
   Overlay();
 
+  //Call parallax
   Parallax();
 }

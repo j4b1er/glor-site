@@ -222,7 +222,8 @@
     padding: 2rem 1rem;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    // grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1rem;
   }
 
@@ -235,8 +236,14 @@
     align-items: center;
     gap: 0.75rem;
 
+    overflow: hidden;
+
+    &--more {
+      background-color: $color-black-100;
+    }
+
     &:hover > svg {
-      background-color: $color-green-accent-300;
+      background-color: $color-green-accent-100;
       fill: $color-black-900;
     }
 
