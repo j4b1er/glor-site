@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function runRouter() {
     await router();
-    ContentComponents();
+    // ContentComponents();
   }
 
   runRouter();
