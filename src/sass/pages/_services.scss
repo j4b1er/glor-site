@@ -87,8 +87,63 @@
       }
 
       &--item {
-        background-color: red;
+        background-color: $color-black-600;
         border-radius: 1rem;
+
+        overflow: hidden;
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        position: relative;
+        cursor: pointer;
+
+        &-content {
+          padding: 1rem;
+          height: 100%;
+
+          display: flex;
+          justify-content: center;
+          flex-flow: column nowrap;
+          gap: 1rem;
+
+          & h3 {
+            color: $color-primary-100;
+            font-size: 1.125rem;
+          }
+
+          & p {
+            color: $color-primary-100;
+            font-weight: 300;
+            opacity: 0.5;
+            font-size: 1rem;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /* number of lines to show */
+            line-clamp: 3;
+            -webkit-box-orient: vertical;
+          }
+
+          & a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+          }
+        }
+
+        & > img {
+          height: 100%;
+          border-radius: 0 1rem 1rem 0;
+          object-fit: cover;
+
+          contain: layout;
+        }
       }
     }
   }

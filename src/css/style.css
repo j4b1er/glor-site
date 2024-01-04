@@ -594,7 +594,7 @@ html {
         font-size: 1.125rem; }
       .grid-cards__card--content p {
         color: #eef1f6;
-        font-weight: 500;
+        font-weight: 300;
         opacity: 0.5;
         font-size: 1rem; }
     .grid-cards__card--icon-container {
@@ -1567,5 +1567,45 @@ html {
         .services-page__second-section-grid {
           grid-template-columns: repeat(3, 1fr); } }
       .services-page__second-section-grid--item {
-        background-color: red;
-        border-radius: 1rem; }
+        background-color: #1f1f1f;
+        border-radius: 1rem;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        position: relative;
+        cursor: pointer; }
+        .services-page__second-section-grid--item-content {
+          padding: 1rem;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          flex-flow: column nowrap;
+          gap: 1rem; }
+          .services-page__second-section-grid--item-content h3 {
+            color: #eef1f6;
+            font-size: 1.125rem; }
+          .services-page__second-section-grid--item-content p {
+            color: #eef1f6;
+            font-weight: 300;
+            opacity: 0.5;
+            font-size: 1rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            /* number of lines to show */
+            line-clamp: 3;
+            -webkit-box-orient: vertical; }
+          .services-page__second-section-grid--item-content a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 1; }
+        .services-page__second-section-grid--item > img {
+          height: 100%;
+          border-radius: 0 1rem 1rem 0;
+          object-fit: cover;
+          contain: layout; }
