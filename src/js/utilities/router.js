@@ -37,6 +37,11 @@ export async function router() {
       title: "IPS Structural Cabling Services",
     },
     {
+      path: "/services/data-centers",
+      page: "/src/pages/services/data-centers.html",
+      title: "Data Center Services",
+    },
+    {
       path: "/projects",
       page: "/src/pages/projects.html",
       title: "Look at our portfolio",

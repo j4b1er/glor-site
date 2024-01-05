@@ -112,8 +112,8 @@
             background-image: url(../media/square-check-solid.svg);
             background-size: contain;
             background-repeat: no-repeat;
-            width: 1em;
-            height: 1em;
+            min-width: 1em;
+            min-height: 1em;
             position: relative;
           }
         }

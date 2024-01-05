@@ -38,6 +38,7 @@
 
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
 
   text-decoration: none;
@@ -105,8 +106,27 @@
   }
 }
 
+.btn-hole {
+  background-color: transparent;
+  border: 1px solid $color-black-100;
+
+  border-radius: 1rem;
+
+  &::after {
+    content: none;
+  }
+
+  &:hover svg {
+    transform: translateX(0);
+  }
+}
+
 .flip-arrow-up {
   transform: rotate(90deg);
+}
+
+.flip-arrow-horizontal {
+  transform: rotateY(180deg);
 }
 
 .nav-active {
