@@ -42,6 +42,11 @@ export async function router() {
       title: "Data Center Services",
     },
     {
+      path: "/services/access-controls",
+      page: "/src/pages/services/access-controls.html",
+      title: "Access Controls Services",
+    },
+    {
       path: "/projects",
       page: "/src/pages/projects.html",
       title: "Look at our portfolio",
