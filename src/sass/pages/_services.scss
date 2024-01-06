@@ -246,9 +246,10 @@
     }
 
     &--item-2 {
-      height: 100%;
-      overflow: hidden;
+      max-height: 35rem;
       padding-right: 1rem;
+
+      overflow: hidden;
 
       & img {
         height: 100%;

@@ -1685,9 +1685,9 @@ html {
             background: #a4ee15;
             color: #121212; }
     .services-page__grid--item-2 {
-      height: 100%;
-      overflow: hidden;
-      padding-right: 1rem; }
+      max-height: 35rem;
+      padding-right: 1rem;
+      overflow: hidden; }
       .services-page__grid--item-2 img {
         height: 100%;
         width: 100%;

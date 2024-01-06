@@ -57,6 +57,11 @@ export async function router() {
       title: "Video Surveillance Services",
     },
     {
+      path: "/services/commercial-residential",
+      page: "/src/pages/services/commercial-residential.html",
+      title: "Commercial Residential System Services",
+    },
+    {
       path: "/projects",
       page: "/src/pages/projects.html",
       title: "Look at our portfolio",
