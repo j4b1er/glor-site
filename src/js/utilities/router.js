@@ -47,6 +47,11 @@ export async function router() {
       title: "Access Controls Services",
     },
     {
+      path: "/services/audio-visual",
+      page: "/src/pages/services/audio-visual.html",
+      title: "Access Controls Services",
+    },
+    {
       path: "/projects",
       page: "/src/pages/projects.html",
       title: "Look at our portfolio",
