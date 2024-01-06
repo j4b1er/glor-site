@@ -22,6 +22,8 @@ dropdownBtnMobile.addEventListener("click", () =>
 
 document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("click", (e) => {
+    // e.preventDefault();
+    // console.log(e.target);
     const targetElm =
       e.target.tagName === "svg" || e.target.tagName === "SPAN"
         ? e.target.parentNode

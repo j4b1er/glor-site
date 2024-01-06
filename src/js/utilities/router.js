@@ -72,6 +72,11 @@ export async function router() {
       title: "The enviroment matter to us",
     },
     {
+      path: "/contact",
+      page: "/src/pages/contact.html",
+      title: "Let's talk",
+    },
+    {
       path: "/404",
       page: "/src/pages/error.html",
       title: "Page not found",
