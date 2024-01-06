@@ -49,7 +49,12 @@ export async function router() {
     {
       path: "/services/audio-visual",
       page: "/src/pages/services/audio-visual.html",
-      title: "Access Controls Services",
+      title: "Audio Visual Services",
+    },
+    {
+      path: "/services/video-surveillance",
+      page: "/src/pages/services/video-surveillance.html",
+      title: "Video Surveillance Services",
     },
     {
       path: "/projects",
