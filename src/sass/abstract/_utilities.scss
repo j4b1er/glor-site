@@ -43,6 +43,8 @@
 
   text-decoration: none;
   font-weight: 500;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1rem;
 
   border-radius: 0.5rem 0 0.5rem 0.5rem;
   padding: 0.725rem;
@@ -91,6 +93,13 @@
   &:hover:after {
     transform: rotate(45deg) translateY(-10%);
   }
+}
+
+button.btn-dark {
+  cursor: pointer;
+  align-self: flex-start;
+  padding: 0.725rem 3rem;
+  border: none;
 }
 
 .btn-dark {
