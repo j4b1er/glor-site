@@ -1365,6 +1365,60 @@ html {
         .about-page__second-section-grid--item4 span {
           font-size: 2.5rem; }
 
+.contact-page {
+  background-color: #1f1f1f;
+  font-family: "Nunito Sans", sans-serif;
+  overflow: hidden; }
+  .contact-page__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    gap: 2rem;
+    width: 100%; }
+    @media only screen and (min-width: 500px) {
+      .contact-page__container {
+        padding: 2rem 1rem; } }
+    @media only screen and (min-width: 750px) {
+      .contact-page__container {
+        padding: 4rem 1rem; } }
+  .contact-page__form-section {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    width: 70%;
+    padding: 4rem 0 0 0; }
+    .contact-page__form-section-group {
+      display: flex;
+      gap: 0.5rem;
+      flex-flow: column nowrap; }
+      .contact-page__form-section-group label {
+        color: #dfe4ea;
+        opacity: 0.5;
+        font-weight: 300; }
+      .contact-page__form-section-group input {
+        border-radius: 0.5rem;
+        padding: 1rem;
+        border: none;
+        background-color: #252525;
+        box-shadow: none;
+        color: #eef1f6;
+        font-size: 1rem; }
+        .contact-page__form-section-group input:focus {
+          border: 1px solid rgba(223, 228, 234, 0.2);
+          outline: none; }
+  .contact-page__contact-section {
+    width: 30%; }
+    .contact-page__contact-section-grid {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 1rem; }
+      .contact-page__contact-section-grid-item {
+        height: 15rem;
+        border-radius: 1rem;
+        background-color: #252525; }
+
 .gogreen-page {
   background-color: #383838;
   font-family: "Nunito Sans", sans-serif; }

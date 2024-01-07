@@ -1,0 +1,77 @@
+.contact-page {
+  background-color: $color-black-600;
+  font-family: "Nunito Sans", sans-serif;
+
+  overflow: hidden;
+
+  &__container {
+    max-width: $main-max-width;
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+
+    @media only screen and (min-width: 500px) {
+      padding: 2rem 1rem;
+    }
+
+    @media only screen and (min-width: 750px) {
+      padding: 4rem 1rem;
+    }
+  }
+
+  &__form-section {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+
+    width: 70%;
+    padding: 4rem 0 0 0;
+
+    &-group {
+      display: flex;
+      gap: 0.5rem;
+      flex-flow: column nowrap;
+
+      & label {
+        color: $color-primary-300;
+        opacity: 0.5;
+        font-weight: 300;
+      }
+
+      & input {
+        border-radius: 0.5rem;
+        padding: 1rem;
+        border: none;
+        background-color: $color-black-300;
+
+        box-shadow: none;
+        color: $color-primary-100;
+        font-size: 1rem;
+
+        &:focus {
+          border: 1px solid rgba($color-primary-300, 0.2);
+          outline: none;
+        }
+      }
+    }
+  }
+
+  &__contact-section {
+    width: 30%;
+    &-grid {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 1rem;
+
+      &-item {
+        height: 15rem;
+        border-radius: 1rem;
+        background-color: $color-black-300;
+      }
+    }
+  }
+}
