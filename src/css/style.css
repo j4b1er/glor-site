@@ -1380,18 +1380,23 @@ html {
   .contact-page__container {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 2rem 1rem;
     display: flex;
+    flex-flow: column nowrap;
     gap: 2rem;
     width: 100%; }
     @media only screen and (min-width: 500px) {
       .contact-page__container {
-        padding: 2rem 1rem; } }
+        padding: 4rem 1rem; } }
     @media only screen and (min-width: 750px) {
       .contact-page__container {
-        padding: 4rem 1rem; } }
+        padding: 6rem 1rem;
+        flex-flow: row nowrap; } }
   .contact-page__description-section {
-    width: 30%; }
+    width: 100%; }
+    @media only screen and (min-width: 750px) {
+      .contact-page__description-section {
+        width: 30%; } }
     .contact-page__description-section-subheader::selection, .contact-page__description-section-header::selection,
     .contact-page__description-section p::selection {
       background: #a4ee15;
@@ -1402,8 +1407,15 @@ html {
       text-transform: uppercase; }
     .contact-page__description-section-header {
       color: #eef1f6;
-      font-size: 3rem;
-      text-transform: uppercase; }
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: 700; }
+      @media only screen and (min-width: 750px) {
+        .contact-page__description-section-header {
+          font-size: 2.25rem; } }
+      @media only screen and (min-width: 992px) {
+        .contact-page__description-section-header {
+          font-size: 3rem; } }
     .contact-page__description-section p {
       color: #dfe4ea;
       font-weight: 300;
@@ -1412,13 +1424,22 @@ html {
       opacity: 0.6;
       margin-top: 1rem; }
   .contact-page__form-section {
-    display: grid;
-    align-content: start;
+    display: flex;
+    flex-flow: column nowrap;
     gap: 1rem;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    width: 70%; }
+    width: 100%; }
+    @media only screen and (min-width: 500px) {
+      .contact-page__form-section {
+        display: grid;
+        align-content: start;
+        gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto; } }
+    @media only screen and (min-width: 750px) {
+      .contact-page__form-section {
+        width: 70%; } }
     .contact-page__form-section-group {
+      width: 100%;
       display: flex;
       gap: 0.25rem;
       flex-flow: column nowrap; }
@@ -1431,6 +1452,7 @@ html {
       .contact-page__form-section-group input,
       .contact-page__form-section-group select,
       .contact-page__form-section-group textarea {
+        width: 100%;
         border-radius: 0.5rem;
         padding: 0.725rem 1rem;
         border: 1px solid #252525;
@@ -1470,19 +1492,21 @@ html {
     .contact-page__contact-section-container {
       max-width: 1280px;
       margin: 0 auto;
-      padding: 0 1rem; }
+      padding: 2rem 1rem; }
       @media only screen and (min-width: 500px) {
         .contact-page__contact-section-container {
-          padding: 2rem 1rem; } }
+          padding: 4rem 1rem; } }
       @media only screen and (min-width: 750px) {
         .contact-page__contact-section-container {
-          padding: 4rem 1rem; } }
+          padding: 6rem 1rem; } }
     .contact-page__contact-section-grid {
-      display: flex;
+      display: grid;
       gap: 1rem;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%; }
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-auto-rows: 150px; }
+      @media only screen and (min-width: 500px) {
+        .contact-page__contact-section-grid {
+          grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); } }
       .contact-page__contact-section-grid-item {
         position: relative;
         display: flex;
@@ -1490,7 +1514,6 @@ html {
         gap: 0.5rem;
         justify-content: flex-end;
         width: 100%;
-        height: 150px;
         border-radius: 1rem;
         background-color: #1f1f1f;
         padding: 1rem; }
@@ -1510,6 +1533,17 @@ html {
           padding: 1rem;
           fill: #eef1f6;
           background-color: #383838; }
+  .contact-page__map-section {
+    position: relative;
+    width: 100%;
+    height: 400px; }
+    .contact-page__map-section iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none; }
 
 .gogreen-page {
   background-color: #383838;

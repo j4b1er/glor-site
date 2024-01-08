@@ -7,23 +7,29 @@
   &__container {
     max-width: $main-max-width;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 2rem 1rem;
 
     display: flex;
+    flex-flow: column nowrap;
     gap: 2rem;
     width: 100%;
 
     @media only screen and (min-width: 500px) {
-      padding: 2rem 1rem;
+      padding: 4rem 1rem;
     }
 
     @media only screen and (min-width: 750px) {
-      padding: 4rem 1rem;
+      padding: 6rem 1rem;
+      flex-flow: row nowrap;
     }
   }
 
   &__description-section {
-    width: 30%;
+    width: 100%;
+
+    @media only screen and (min-width: 750px) {
+      width: 30%;
+    }
 
     &-subheader,
     &-header,
@@ -42,8 +48,18 @@
 
     &-header {
       color: $color-primary-100;
-      font-size: 3rem;
+      font-size: 2rem;
       text-transform: uppercase;
+
+      font-weight: 700;
+
+      @media only screen and (min-width: 750px) {
+        font-size: 2.25rem;
+      }
+
+      @media only screen and (min-width: 992px) {
+        font-size: 3rem;
+      }
     }
 
     & p {
@@ -59,16 +75,25 @@
   }
 
   &__form-section {
-    display: grid;
-    align-content: start;
+    display: flex;
+    flex-flow: column nowrap;
     gap: 1rem;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
+    width: 100%;
 
-    width: 70%;
-    // padding: 4rem 0 0 0;
+    @media only screen and (min-width: 500px) {
+      display: grid;
+      align-content: start;
+      gap: 1rem;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+    }
+
+    @media only screen and (min-width: 750px) {
+      width: 70%;
+    }
 
     &-group {
+      width: 100%;
       display: flex;
       gap: 0.25rem;
       flex-flow: column nowrap;
@@ -87,6 +112,7 @@
       & input,
       & select,
       & textarea {
+        width: 100%;
         border-radius: 0.5rem;
         padding: 0.725rem 1rem;
         border: 1px solid $color-black-300;
@@ -133,24 +159,26 @@
     &-container {
       max-width: $main-max-width;
       margin: 0 auto;
-      padding: 0 1rem;
+      padding: 2rem 1rem;
 
       @media only screen and (min-width: 500px) {
-        padding: 2rem 1rem;
+        padding: 4rem 1rem;
       }
 
       @media only screen and (min-width: 750px) {
-        padding: 4rem 1rem;
+        padding: 6rem 1rem;
       }
     }
 
     &-grid {
-      display: flex;
+      display: grid;
       gap: 1rem;
-      align-items: center;
-      justify-content: space-between;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-auto-rows: 150px;
 
-      width: 100%;
+      @media only screen and (min-width: 500px) {
+        grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      }
 
       &-item {
         position: relative;
@@ -161,7 +189,6 @@
         justify-content: flex-end;
 
         width: 100%;
-        height: 150px;
         border-radius: 1rem;
         background-color: $color-black-600;
 
@@ -191,6 +218,22 @@
           background-color: $color-black-100;
         }
       }
+    }
+  }
+
+  &__map-section {
+    position: relative;
+    width: 100%;
+    height: 400px;
+
+    & iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      border: none;
     }
   }
 }
