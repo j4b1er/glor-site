@@ -22,6 +22,39 @@
     }
   }
 
+  &__contact-section {
+    width: 30%;
+
+    &-subheader,
+    &-header,
+    & p {
+      &::selection {
+        background: $color-green-accent-100;
+        color: $color-black-900;
+      }
+    }
+
+    &-subheader {
+      color: $color-green-accent-100;
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+
+    &-header {
+      color: $color-primary-100;
+      font-size: 3rem;
+      text-transform: uppercase;
+    }
+
+    & p {
+      color: $color-primary-300;
+      font-weight: 300;
+      opacity: 0.6;
+
+      margin-top: 1rem;
+    }
+  }
+
   &__form-section {
     display: grid;
     align-content: start;
@@ -43,7 +76,7 @@
 
       & label {
         color: $color-primary-300;
-        opacity: 0.5;
+        opacity: 0.6;
 
         font-weight: 300;
       }
@@ -51,8 +84,6 @@
       & input,
       & select,
       & textarea {
-        font-family: "Nunito Sans", sans-serif;
-
         border-radius: 0.5rem;
         padding: 0.725rem 1rem;
         border: 1px solid $color-black-300;
@@ -89,21 +120,6 @@
       & textarea {
         height: 10rem;
         resize: vertical;
-      }
-    }
-  }
-
-  &__contact-section {
-    width: 30%;
-    &-grid {
-      display: flex;
-      flex-flow: column nowrap;
-      gap: 1rem;
-
-      &-item {
-        height: 15rem;
-        border-radius: 1rem;
-        background-color: $color-black-300;
       }
     }
   }
