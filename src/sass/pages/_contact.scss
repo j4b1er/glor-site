@@ -22,7 +22,7 @@
     }
   }
 
-  &__contact-section {
+  &__description-section {
     width: 30%;
 
     &-subheader,
@@ -49,6 +49,9 @@
     & p {
       color: $color-primary-300;
       font-weight: 300;
+      line-height: 1.5;
+      letter-spacing: 0.05rem;
+
       opacity: 0.6;
 
       margin-top: 1rem;
@@ -120,6 +123,73 @@
       & textarea {
         height: 10rem;
         resize: vertical;
+      }
+    }
+  }
+
+  &__contact-section {
+    background-color: $color-black-900;
+
+    &-container {
+      max-width: $main-max-width;
+      margin: 0 auto;
+      padding: 0 1rem;
+
+      @media only screen and (min-width: 500px) {
+        padding: 2rem 1rem;
+      }
+
+      @media only screen and (min-width: 750px) {
+        padding: 4rem 1rem;
+      }
+    }
+
+    &-grid {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+
+      width: 100%;
+
+      &-item {
+        position: relative;
+
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 0.5rem;
+        justify-content: flex-end;
+
+        width: 100%;
+        height: 150px;
+        border-radius: 1rem;
+        background-color: $color-black-600;
+
+        padding: 1rem;
+
+        & h3 {
+          color: $color-primary-100;
+        }
+
+        & p {
+          color: $color-primary-100;
+          opacity: 0.5;
+          font-weight: 300;
+        }
+
+        & svg {
+          position: absolute;
+          top: 0;
+          right: 0;
+
+          height: 60px;
+          width: 60px;
+          border-radius: 0 calc(1rem - 1px) 0 calc(1rem - 1px);
+          padding: 1rem;
+
+          fill: $color-primary-100;
+          background-color: $color-black-100;
+        }
       }
     }
   }
