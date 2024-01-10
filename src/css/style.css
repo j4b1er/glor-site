@@ -370,8 +370,9 @@ html {
     margin: 0 auto;
     padding: 2rem 1rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1rem; }
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 1rem;
+    border-bottom: 1px solid #1f1f1f; }
   .main-navigation__dropdown-card {
     background-color: #1f1f1f;
     border-radius: 0.5rem;
@@ -409,6 +410,35 @@ html {
       color: #6e798a;
       font-size: 0.9rem;
       font-weight: 500; }
+  .main-navigation__dropdown-footer {
+    position: relative;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #121212;
+    transition: all 0.3s; }
+    .main-navigation__dropdown-footer:hover {
+      background-color: #383838; }
+    .main-navigation__dropdown-footer:hover svg {
+      transform: translateX(4px); }
+    .main-navigation__dropdown-footer span {
+      color: #eef1f6;
+      font-weight: 500;
+      transition: all 0.3s; }
+    .main-navigation__dropdown-footer svg {
+      height: 1rem;
+      fill: #eef1f6;
+      transition: all 0.3s; }
+    .main-navigation__dropdown-footer a {
+      text-decoration: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 1; }
 
 .main-navigation-mobile {
   background-color: #121212;
