@@ -537,6 +537,15 @@ html {
         opacity: 0.8; }
       .main-navigation-mobile__drop-menu--submenu[data-visible="false"] {
         display: none; }
+    .main-navigation-mobile__drop-menu--allservices {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      border-top: 1px solid #1f1f1f;
+      padding-top: 0.5rem; }
+      .main-navigation-mobile__drop-menu--allservices svg {
+        height: 1rem;
+        fill: #eef1f6; }
     .main-navigation-mobile__drop-menu--contact {
       list-style: none;
       display: flex;

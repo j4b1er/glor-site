@@ -148,6 +148,20 @@
       }
     }
 
+    &--allservices {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+
+      border-top: 1px solid #1f1f1f;
+      padding-top: 0.5rem;
+
+      & svg {
+        height: 1rem;
+        fill: $color-primary-100;
+      }
+    }
+
     &--contact {
       list-style: none;
       display: flex;
