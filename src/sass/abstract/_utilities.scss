@@ -55,6 +55,8 @@
 
   transition: all 0.2s ease-in-out;
 
+  z-index: 1;
+
   &:hover {
     background-color: $color-green-accent-100;
     color: $color-black-900 !important;

@@ -139,7 +139,8 @@
   padding: 0.725rem;
   position: relative;
   overflow: hidden;
-  transition: all 0.2s ease-in-out; }
+  transition: all 0.2s ease-in-out;
+  z-index: 1; }
   .btn-light:hover {
     background-color: #a4ee15;
     color: #121212 !important; }

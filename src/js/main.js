@@ -23,13 +23,14 @@ dropdownBtnMobile.addEventListener("click", () =>
 document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("click", (e) => {
     // e.preventDefault();
-    // console.log(e.target);
-    const targetElm =
-      e.target.tagName === "svg" || e.target.tagName === "SPAN"
-        ? e.target.parentNode
-        : e.target.tagName === "path"
-        ? e.target.parentNode.parentNode
-        : e.target;
+    // console.log(e.target.closest("a"));
+    const targetElm = e.target.closest("a");
+    // const targetElm =
+    //   e.target.tagName === "svg" || e.target.tagName === "SPAN"
+    //     ? e.target.parentNode
+    //     : e.target.tagName === "path"
+    //     ? e.target.parentNode.parentNode
+    //     : e.target;
     if (targetElm.hasAttribute("data-route")) {
       e.preventDefault();
       navigate(targetElm.href);
@@ -38,7 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function runRouter() {
     await router();
-    // ContentComponents();
   }
 
   runRouter();
